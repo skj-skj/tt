@@ -1,2 +1,2 @@
 # tt - Time Table 
-this is display time table of current day
+this displays time table of current day
