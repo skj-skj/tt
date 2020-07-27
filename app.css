@@ -2,7 +2,43 @@ body{
     background-color: #1E243A;
 }
 
+p.error{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #6AB0E9;
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+    display: block;
+    transition: .25s;
+    color: #fff;
+}
+
+p.lecItemSplit{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #6AB0E9;
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+    display: block;
+    transition: .25s;
+    color: #fff;
+}
+
 a{
+    text-decoration: none;
+    color: #fff;
+}
+a.lecItem{
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     font-weight: bold;
     font-size: 18px;
