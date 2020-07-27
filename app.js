@@ -43,7 +43,7 @@ meetLinks = {
     'B2 SEMINAR(RJ)': 'https://meet.google.com/lookup/c7mwo6raen?authuser=2',
     'EEDM(SU)': 'https://meet.google.com/lookup/esfasmvt7s?authuser=2',
     'QM(RJ)': 'https://meet.google.com/lookup/f43zwuvuqk?authuser=2',
-    'IOT(RB)': '#',
+    'IOT(RB)': 'https://meet.google.com/lookup/cqbbzdwt6l?authuser=2',
     'VERBAL (Prof. Mamta Sharma)': '#',
     'VERBAL (Prof. Bhavani Singh)': '#',
     'QUANT (Prof. Abhishek Karwa)': '#'
