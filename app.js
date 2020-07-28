@@ -49,6 +49,8 @@ meetLinks = {
     'QUANT (Prof. Abhishek Karwa)': '#'
 }
 let lecCount = 1;
+
+let timing = ['0','10:10 AM','11:00 AM','11:50 AM'];
 let weekDay = getWeekDay();
 
 timeTable.forEach(element => {
@@ -68,6 +70,9 @@ timeTable.forEach(element => {
                 let mainDivBody = document.querySelector('div.lectures');
                 let aTagEEDM = document.createElement('a');
                 let aTagQM = document.createElement('a');
+                let spanTag = document.createElement('span');
+                spanTag.textContent = `{${timing[lecCount]}}`;
+
                 aTagEEDM.href = meetLinks['EEDM(SU)'];
                 aTagEEDM.textContent = 'EEDM(SU)';
                 aTagEEDM.target = '_blank';
@@ -77,24 +82,28 @@ timeTable.forEach(element => {
                 aTagQM.target = '_blank';
                 let basePTag  = document.createElement('p');
                 basePTag.className = 'lecItemSplit'
-                basePTag.append(`${lecCount}) `);
+                basePTag.appendChild(spanTag);
+                basePTag.append(` ${lecCount}) `);
                 basePTag.appendChild(aTagEEDM);
                 basePTag.append(' OR ');
                 basePTag.appendChild(aTagQM);
 
                 mainDivBody.appendChild(basePTag);
 
-
+                lecCount++;
 
             }
             else{
                 let mainDivBody = document.querySelector('div.lectures');
                 let aTag = document.createElement('a');
+                let spanTag = document.createElement('span');
+                spanTag.textContent = `{${timing[lecCount]}}`;
                 aTag.className = 'lecItem';
                 aTag.target = '_blank';
                 aTag.href = meetLinks[lec];
-                aTag.textContent = `${lecCount}) ${lec}`;
-                
+                aTag.appendChild(spanTag);
+                aTag.append(` ${lecCount}) ${lec}`);
+
             
                 mainDivBody.appendChild(aTag);
                 

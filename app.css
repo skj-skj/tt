@@ -86,3 +86,7 @@ div#weekDay{
     margin-left: 5em;
     margin-right: 5em;
 }
+
+span{
+    color: blueviolet;
+}
