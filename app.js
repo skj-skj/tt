@@ -83,6 +83,7 @@ timeTable.forEach(element => {
                 let basePTag  = document.createElement('p');
                 basePTag.className = 'lecItemSplit'
                 basePTag.appendChild(spanTag);
+                basePTag.append(document.createElement('br'));
                 basePTag.append(` ${lecCount}) `);
                 basePTag.appendChild(aTagEEDM);
                 basePTag.append(' OR ');
@@ -102,6 +103,7 @@ timeTable.forEach(element => {
                 aTag.target = '_blank';
                 aTag.href = meetLinks[lec];
                 aTag.appendChild(spanTag);
+                aTag.append(document.createElement('br'));
                 aTag.append(` ${lecCount}) ${lec}`);
 
             
