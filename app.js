@@ -26,14 +26,26 @@ function getWeekDay() {
 //     document.body.removeChild(dummy);
 // }
 
+
+/*
+Subjects:
+B2 PROJECT(KP)
+EEDM(SU) or QM(RJ)
+B2 SEMINAR(RJ)
+IOT(RB)
+VERBAL (Prof. Mamta Sharma)
+VERBAL (Prof. Bhavani Singh)
+QUANT (Prof. Abhishek Karwa)
+Its Sunday
+*/
 timeTable = [
 
-    ['Monday','B2 PROJECT(KP)','EEDM(SU) or QM(RJ)','B2 SEMINAR(RJ)'],
-    ['Tuesday','B2 SEMINAR(RJ)','IOT(RB)','B2 PROJECT(KP)'],
-    ['Wednesday','B2 SEMINAR(RJ)','EEDM(SU) or QM(RJ)','VERBAL (Prof. Mamta Sharma)'],
-    ['Thursday','B2 PROJECT(KP)','IOT(RB)','VERBAL (Prof. Bhavani Singh)'],
-    ['Friday','EEDM(SU) or QM(RJ)','IOT(RB)','QUANT (Prof. Abhishek Karwa)'],
-    ['Saturday','IOT(RB)','EEDM(SU) or QM(RJ)','QUANT (Prof. Abhishek Karwa)'],
+    ['Monday','EEDM(SU) or QM(RJ)','B2 PROJECT(KP)','B2 SEMINAR(RJ)'],
+    ['Tuesday','IOT(RB)','B2 SEMINAR(RJ)','B2 PROJECT(KP)'],
+    ['Wednesday','EEDM(SU) or QM(RJ)','B2 SEMINAR(RJ)','VERBAL (Prof. Mamta Sharma)'],
+    ['Thursday','IOT(RB)','B2 PROJECT(KP)','VERBAL (Prof. Bhavani Singh)'],
+    ['Friday','IOT(RB)','EEDM(SU) or QM(RJ)','QUANT (Prof. Abhishek Karwa)'],
+    ['Saturday','EEDM(SU) or QM(RJ)','IOT(RB)','QUANT (Prof. Abhishek Karwa)'],
     ['Sunday','Its Sunday','Its Sunday','Its Sunday'],
 
 ];
@@ -50,7 +62,7 @@ meetLinks = {
 }
 let lecCount = 1;
 
-let timing = ['0','10:10 AM','11:00 AM','11:50 AM'];
+let timing = ['0','09:00 AM - 09:40 AM','09:50 AM - 10:30 AM','11:50 AM - 12:30 PM'];
 let weekDay = getWeekDay();
 
 timeTable.forEach(element => {
@@ -61,7 +73,7 @@ timeTable.forEach(element => {
                 let aTag = document.createElement('a');
                 aTag.className = 'lecItem';
                 aTag.href = '#';
-                aTag.textContent = `${lec}:`
+                aTag.textContent = `${lec}: (Updated)`
 
                 
                 mainDivBody.appendChild(aTag);    
