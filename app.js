@@ -62,7 +62,7 @@ meetLinks = {
 }
 let lecCount = 1;
 
-let timing = ['0','09:00 AM - 09:40 AM','09:50 AM - 10:30 AM','11:50 AM - 12:30 PM'];
+let timing = ['0','09:00 AM - 09:50 AM','10:00 AM - 10:50 AM','12:20 AM - 1:10 PM'];
 let weekDay = getWeekDay();
 
 timeTable.forEach(element => {
