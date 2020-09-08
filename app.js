@@ -13,6 +13,18 @@ function getWeekDay() {
     return weekDay;
 }
 
+function setVideo(){
+    videoBanner = document.querySelector('video.video-banner');
+    videoBanner.innerHTML = "";
+    sourceVid = document.createElement('source');
+    let num = ((Math.random()*7)+1);
+    num = Math.round(num);
+    sourceVid.setAttribute("src",`./assest/${num}.mp4`);
+    sourceVid.setAttribute("type","video/mp4");
+    sourceVid.textContent = "Your browser does not support the video tag.";
+    videoBanner.appendChild(sourceVid);
+}
+
 // function copyToClipboard(text) {
 //     var dummy = document.createElement("textarea");
 //     // to avoid breaking orgain page when copying more words
@@ -132,11 +144,4 @@ timeTable.forEach(element => {
     }
 });
 
-
-
-
-
-
-
-
-
+setVideo();
