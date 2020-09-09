@@ -33,12 +33,13 @@ p.lecItemSplit{
     border-bottom: 1px solid #e0e0e0;
     display: block;
     transition: .25s;
-    color: #fff;
+    color:#e0e0e0;
+    /* color: #fff; */
 }
 
 a{
     text-decoration: none;
-    color: #e0e0e0;
+    color: #fff;
 }
 a.lecItem{
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
