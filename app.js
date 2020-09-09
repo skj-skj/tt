@@ -83,7 +83,7 @@ timeTable.forEach(element => {
             if(lec == weekDay){
                 let mainDivBody = document.querySelector('div#weekDay');
                 let aTag = document.createElement('a');
-                aTag.className = 'lecItem';
+                aTag.className = 'lecItem weekDay';
                 aTag.href = '#';
                 aTag.textContent = `${lec}: (Updated)`
 

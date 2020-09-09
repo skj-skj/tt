@@ -8,7 +8,7 @@ p.error{
     font-size: 18px;
     box-sizing: inherit;
     -webkit-tap-highlight-color: transparent;
-    background-color: #6AB0E9;
+    /* background-color: #6AB0E9; */
     line-height: 1.5rem;
     padding: 10px 20px;
     margin: 0;
@@ -16,6 +16,7 @@ p.error{
     display: block;
     transition: .25s;
     color: #fff;
+    border: 1px solid #fff;
 }
 
 p.lecItemSplit{
@@ -24,7 +25,7 @@ p.lecItemSplit{
     font-size: 18px;
     box-sizing: inherit;
     -webkit-tap-highlight-color: transparent;
-    background-color: #6AB0E9;
+    /* background-color: #6AB0E9; */
     line-height: 1.5rem;
     padding: 10px 20px;
     margin: 0;
@@ -36,7 +37,7 @@ p.lecItemSplit{
 
 a{
     text-decoration: none;
-    color: #fff;
+    color: #e0e0e0;
 }
 a.lecItem{
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
@@ -45,7 +46,7 @@ a.lecItem{
     box-sizing: inherit;
     -webkit-tap-highlight-color: transparent;
     text-decoration: none;
-    background-color: #6AB0E9;
+    /* background-color: #6AB0E9; */
     line-height: 1.5rem;
     padding: 10px 20px;
     margin: 0;
@@ -59,7 +60,7 @@ div.lectures{
     line-height: 1.5;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     font-weight: normal;
-    color: rgba(0,0,0,0.87);
+    color: #000000de;
     font-size: 14px;
     box-sizing: inherit;
     margin: auto auto 1em auto;
@@ -67,26 +68,47 @@ div.lectures{
     border-radius: 2px;
     overflow: hidden;
     position: relative;
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 div#weekDay{
+    text-align: center;
     line-height: 1.5;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     font-weight: normal;
-    color: rgba(0,0,0,0.87);
+    color: #000000de;
     font-size: 14px;
     box-sizing: inherit;
     margin: 0 auto 1em auto;
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
+    /* border: 1px solid #e0e0e0;
+    border-radius: 2px; */
     overflow: hidden;
     position: relative;
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: none;
+
+    border-radius: 19px;
+    background: #1E243A;
+    box-shadow: inset 5px 5px 10px #10131e,
+                inset -5px -5px 10px #2c3556;
+
 }
 
 span{
     color: blueviolet;
+}
+
+img#logo{
+    /* text-align: center; */
+    width: 75px;
+    margin-top: 10px;
+    border-radius: 35px;
+    box-shadow:  5px 4px 5px #10131e,
+                 -5px -4px 5px #2c3556;
+}
+
+a.weekDay{
+    border-bottom: none;
 }
