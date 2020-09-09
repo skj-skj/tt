@@ -17,6 +17,7 @@ p.error{
     transition: .25s;
     color: #fff;
     border: 1px solid #fff;
+    line-height: 1.5;
 }
 
 p.lecItemSplit{
@@ -97,7 +98,16 @@ div#weekDay{
 }
 
 span{
-    color: blueviolet;
+    /* color: blueviolet; */
+    color: #c7c7c7;
+    
+    padding: 5px;
+    /* margin: 5px; */
+
+    border-radius: 16px;
+    background: #1E243A;
+    box-shadow: inset 3px 3px 5px #10131e,
+                inset -3px -3px 5px #2c3556;
 }
 
 img#logo{
