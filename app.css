@@ -9,7 +9,7 @@ p.error{
     box-sizing: inherit;
     -webkit-tap-highlight-color: transparent;
     /* background-color: #6AB0E9; */
-    line-height: 1.5rem;
+    line-height: 1.75rem;
     padding: 10px 20px;
     margin: 0;
     border-bottom: 1px solid #e0e0e0;
@@ -17,7 +17,6 @@ p.error{
     transition: .25s;
     color: #fff;
     border: 1px solid #fff;
-    line-height: 1.5;
 }
 
 p.lecItemSplit{
@@ -27,7 +26,7 @@ p.lecItemSplit{
     box-sizing: inherit;
     -webkit-tap-highlight-color: transparent;
     /* background-color: #6AB0E9; */
-    line-height: 1.5rem;
+    line-height: 1.75rem;
     padding: 10px 20px;
     margin: 0;
     border-bottom: 1px solid #e0e0e0;
@@ -49,7 +48,7 @@ a.lecItem{
     -webkit-tap-highlight-color: transparent;
     text-decoration: none;
     /* background-color: #6AB0E9; */
-    line-height: 1.5rem;
+    line-height: 1.75rem;
     padding: 10px 20px;
     margin: 0;
     border-bottom: 1px solid #e0e0e0;
@@ -59,7 +58,7 @@ a.lecItem{
 }
 
 div.lectures{
-    line-height: 1.5;
+    /* line-height: 1.5; */
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     font-weight: normal;
     color: #000000de;
@@ -122,4 +121,10 @@ img#logo{
 
 a.weekDay{
     border-bottom: none;
+}
+
+video.video-banner{
+    border-radius: 15px;
+    box-shadow:  5px 5px 5px #10131e,
+                 -5px -5px 5px #2c3556;
 }
