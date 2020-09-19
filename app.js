@@ -68,7 +68,7 @@ meetLinks = {
     'EEDM(SU)': 'https://meet.google.com/lookup/esfasmvt7s?authuser=2',
     'QM(RJ)': 'https://meet.google.com/lookup/f43zwuvuqk?authuser=2',
     'IOT(RB)': 'https://meet.google.com/lookup/cqbbzdwt6l?authuser=2',
-    'VERBAL (Prof. Mamta Sharma)': 'https://meet.google.com/lookup/mm-sst?authuser=2',
+    'VERBAL (Prof. Mamta Sharma)': 'https://meet.google.com/lookup/ms-sst?authuser=2',
     'VERBAL (Prof. Bhavani Singh)': '#',
     'QUANT (Prof. Abhishek Karwa)': 'https://meet.google.com/lookup/sst_cse_coe?authuser=2'
 }
