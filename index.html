@@ -30,13 +30,37 @@
 
 </head>
 <body>
+
+    
+
+    <!-- Main Week Day Div -->
     <div id="weekDay">
         <p>
             <img id="logo" src="./tt-logo-256.jpeg" alt="TT-Logo">
         </p>
+    </div>
+
+
+    <div class='nav'>
+        <!-- Left Arrow -->
+    <button class="arrow left">
+        <svg width="30px" height="30px" viewBox="0 0 50 80" xml:space="preserve">
+          <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+          45.63,75.8 0.375,38.087 45.63,0.375 "/>
+        </svg>  
+    </button>
+
+    <!-- Right Arrow -->
+    <button class="arrow right">
+        <svg width="30px" height="30px" viewBox="0 0 50 80" xml:space="preserve">
+          <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+          0.375,0.375 45.63,38.087 0.375,75.8 "/>
+        </svg>
+      </button>
+    </div>
+    
     
 
-    </div>
     <div class="lectures">
         
     </div>
@@ -50,11 +74,19 @@
             1) if you get any <span >error</span> first check you are login with the college id.<br/><br/>
             2) if you get error<br/>
             <span>"Check your meeting code"</span>
-            copy the link and iterate the value of '<span>authuser</span>' to <span >0,1,2,3</span>
+            iterate the value of '<span>authuser</span>' to <span >0,1,2,3</span> using buttons given below
             by default it is <span >2</span> (cause of error: client having more than one account logged in the browser)
             
         </p>
     </div>
+    <footer>
+        <ul class="authuser">
+            <li><p>0</p></li>
+            <li><p>1</p></li>
+            <li><p>2</p></li>
+            <li><p>3</p></li>
+        </ul>
+    </footer>
     
     
 </body>

@@ -128,3 +128,58 @@ video.video-banner{
     box-shadow:  5px 5px 5px #10131e,
                  -5px -5px 5px #2c3556;
 }
+
+footer ul.authuser{
+    padding-inline-start: 0;
+    display: flex;
+    justify-content: space-around;
+}
+footer ul.authuser li{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: #c7c7c7;
+    color: #1E243A;
+    border-radius: 20px;
+}
+
+footer ul.authuser li p{
+    font-size: x-large;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    margin: auto auto;
+}
+
+footer ul.authuser li:active{
+    
+    background-color: #10131e;
+    color: #c7c7c7;
+
+}
+
+/* p.nav {
+    display: inline;
+    color: #c7c7c7;
+} */
+
+/* Arrow CSS */
+button {
+    /* -webkit-appearance: none; */
+    background: transparent;
+    border: 0;
+    outline:0;
+  }
+
+.arrow:hover polyline,.arrow:active polyline{
+    stroke-width: 6px;
+}
+div.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Arrow CSS End */
