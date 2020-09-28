@@ -123,12 +123,15 @@ a.weekDay{
     border-bottom: none;
 }
 
+/* Video Banner CSS */
 video.video-banner{
     border-radius: 15px;
     box-shadow:  5px 5px 5px #10131e,
                  -5px -5px 5px #2c3556;
 }
+/* Video Banner CSS End */
 
+/* Authuser CSS */
 footer ul.authuser{
     padding-inline-start: 0;
     display: flex;
@@ -159,11 +162,7 @@ footer ul.authuser li:active{
     color: #c7c7c7;
 
 }
-
-/* p.nav {
-    display: inline;
-    color: #c7c7c7;
-} */
+/* Authuser CSS End */
 
 /* Arrow CSS */
 button {
@@ -180,6 +179,4 @@ div.nav{
     display: flex;
     justify-content: space-between;
 }
-
-
 /* Arrow CSS End */
