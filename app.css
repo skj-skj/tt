@@ -138,6 +138,7 @@ footer ul.authuser{
     justify-content: space-around;
 }
 footer ul.authuser li{
+    cursor:pointer;
     display: flex;
     flex-direction: row;
     align-items:center;
