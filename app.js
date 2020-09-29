@@ -128,8 +128,8 @@ TODO: save the value of authuser to cookies
 */
 meetLinks = {
     'B2 PROJECT(KP)': 'https://meet.google.com/lookup/danco6xf7j?authuser=',
-    'B2 SEMINAR(RJ)':'https://meet.google.com/lookup/eoehgugsdv?authuser=',
-    // 'B2 SEMINAR(RJ)': 'https://meet.google.com/lookup/c7mwo6raen?authuser=2',
+    // 'B2 SEMINAR(RJ)':'https://meet.google.com/lookup/eoehgugsdv?authuser=',
+    'B2 SEMINAR(RJ)': 'https://meet.google.com/lookup/c7mwo6raen?authuser=2',
     'EEDM(SU)': 'https://meet.google.com/lookup/esfasmvt7s?authuser=',
     'QM(RJ)': 'https://meet.google.com/lookup/f43zwuvuqk?authuser=',
     'IOT(RB)': 'https://meet.google.com/lookup/cqbbzdwt6l?authuser=',
