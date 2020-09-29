@@ -141,7 +141,7 @@ meetLinks = {
 
 // Timing of the periods
 // here value in 0th index if buffer value to facilitate the DOM Manipulation
-let timing = ['0','09:00 AM - 09:50 AM','10:00 AM - 10:50 AM','12:20 AM - 1:10 PM'];
+let timing = ['0','09:00 AM - 09:50 AM','10:00 AM - 10:50 AM','12:20 PM - 1:10 PM'];
 
 // It is the DOM Manipulation Funciton
 /*
