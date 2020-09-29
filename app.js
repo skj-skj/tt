@@ -105,9 +105,9 @@ let authuser = 2;
  */
 timeTable = [
 
-    ['Monday','EEDM(SU) or QM(RJ)','B2 PROJECT(KP)','B2 SEMINAR(RJ)'],
-    ['Tuesday','IOT(RB)','B2 SEMINAR(RJ)','B2 PROJECT(KP)'],
-    ['Wednesday','EEDM(SU) or QM(RJ)','B2 SEMINAR(RJ)','VERBAL (Prof. Mamta Sharma)'],
+    ['Monday','EEDM(SU) or QM(RJ)','B2 PROJECT(KP)','B2 SEMINAR[AC]'],
+    ['Tuesday','IOT(RB)','B2 SEMINAR(AC)','B2 PROJECT(KP)'],
+    ['Wednesday','EEDM(SU) or QM(RJ)','B2 SEMINAR(AC)','VERBAL (Prof. Mamta Sharma)'],
     ['Thursday','IOT(RB)','B2 PROJECT(KP)','VERBAL (Prof. Bhavani Singh)'],
     ['Friday','IOT(RB)','EEDM(SU) or QM(RJ)','QUANT (Prof. Abhishek Karwa)'],
     ['Saturday','EEDM(SU) or QM(RJ)','IOT(RB)','QUANT (Prof. Abhishek Karwa)'],
@@ -128,8 +128,8 @@ TODO: save the value of authuser to cookies
 */
 meetLinks = {
     'B2 PROJECT(KP)': 'https://meet.google.com/lookup/danco6xf7j?authuser=',
-    // 'B2 SEMINAR(RJ)':'https://meet.google.com/lookup/eoehgugsdv?authuser=',
-    'B2 SEMINAR(RJ)': 'https://meet.google.com/lookup/c7mwo6raen?authuser=2',
+    'B2 SEMINAR[AC]':'https://meet.google.com/lookup/eoehgugsdv?authuser=',
+    'B2 SEMINAR(AC)': 'https://meet.google.com/lookup/c7mwo6raen?authuser=',
     'EEDM(SU)': 'https://meet.google.com/lookup/esfasmvt7s?authuser=',
     'QM(RJ)': 'https://meet.google.com/lookup/f43zwuvuqk?authuser=',
     'IOT(RB)': 'https://meet.google.com/lookup/cqbbzdwt6l?authuser=',
