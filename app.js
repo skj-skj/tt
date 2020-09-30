@@ -177,18 +177,17 @@ function timeTableDisplay(weekDay){
                     // Selecting a mainDivBody element which is 'div.lectures'
                     let mainDivBody = document.querySelector('div#weekDay');
 
-                    // Creating 'a' tag element
-                    let aTag = document.createElement('a');
-                    aTag.className = 'lecItem weekDay';
-                    aTag.href = '#';
-                    aTag.textContent = `${item} ${shuffle(['😄','😍','😅','😎','😥','🙄',
+                    // Creating 'p' tag element
+                    let pTag = document.createElement('p');
+                    pTag.className = 'lecItem weekDay';
+                    pTag.textContent = `${item} ${shuffle(['😄','😍','😅','😎','😥','🙄',
                                                           '😫','😪','🤐','😴','🥱','😝',
                                                           '😒','😕','🙃','😲','😖','😤',
                                                           '🤯','🤪','😵','🤬','🥺','😇',
                                                           '🤫','🤭','🧐','😈','🤳','🙏',
                                                           '💻','🔞','💔',])[0]}`;
 
-                    mainDivBody.appendChild(aTag);
+                    mainDivBody.appendChild(pTag);
                 }
 
                 // for EEDM & QM Lectors only
