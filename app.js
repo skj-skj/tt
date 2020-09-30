@@ -237,21 +237,25 @@ function timeTableDisplay(weekDay){
 
                     // Creating 'a' Tag for the lecture/period
                     let aTag = document.createElement('a');
-                    aTag.className = 'lecItem';
                     aTag.target = '_blank';
                     aTag.href = `${meetLinks[item]}${authuser}`;
+                    aTag.append(`${item}`);
 
                     //Creating 'span' Tag for timing of the lecture/period
                     let spanTag = document.createElement('span');
                     spanTag.textContent = `{${timing[lecCount]}}`;
-                    
-                    // adding 'span' Tag and lecture/period name
-                    aTag.appendChild(spanTag);
-                    aTag.append(document.createElement('br'));
-                    aTag.append(` ${lecCount}) ${item}`);
+
+                    //Creating base 'p' Tag
+                    let basePTag = document.createElement('p');
+                    basePTag.className = 'lecItem';
+                    // appending in basePTag
+                    basePTag.append(spanTag);
+                    basePTag.append(document.createElement('br'));
+                    basePTag.append(`${lecCount}) `);
+                    basePTag.append(aTag);
     
                     // appending 'a' tag in mainDivBody
-                    mainDivBody.appendChild(aTag);
+                    mainDivBody.appendChild(basePTag);
                     
                     lecCount++;
                 }
