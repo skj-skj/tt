@@ -1,5 +1,10 @@
 //Welcome to Time Table B2 Project
 
+import tt from './config/config.js';
+let timeTableObj = tt['tt'];
+
+console.log(timeTableObj)
+
 //It returns current weekDay Name like: Monday,Tuesday etc.
 function getWeekDay() {
     var weekday = new Array(7);
@@ -37,19 +42,19 @@ function getWeekDayNameByNumber(num){
 
 //It is DOM Manipulation fuction for Video Element
 function setVideo(){
-    videoBanner = document.querySelector('video.video-banner');
+    let videoBanner = document.querySelector('video.video-banner');
     // empties the videoBanner element
     videoBanner.pause();
     videoBanner.innerHTML = "";
     videoBanner.load();
 
-    sourceVid = document.createElement('source');
+    let sourceVid = document.createElement('source');
 
     // Generate Random no between 1-8
     let num = ((Math.random()*7)+1);
     num = Math.round(num);
 
-    sourceVid.setAttribute("src",`./assest/${num}.mp4`);
+    sourceVid.setAttribute("src",`./assets/${num}.mp4`);
     sourceVid.setAttribute("type","video/mp4");
     sourceVid.textContent = "Your browser does not support the video tag.";
     videoBanner.appendChild(sourceVid);
@@ -103,7 +108,7 @@ let authuser = 2;
  Row:
  Each Day Periods including WeekDay
  */
-timeTable = [
+let timeTable = [
 
     ['Monday','EEDM(SU) or QM(RJ)','B2 PROJECT(KP)','B2 SEMINAR[AC]'],
     ['Tuesday','IOT(RB)','B2 SEMINAR(AC)','B2 PROJECT(KP)'],
@@ -126,7 +131,7 @@ By default authuser = 2
 
 TODO: save the value of authuser to cookies
 */
-meetLinks = {
+let meetLinks = {
     'B2 PROJECT(KP)': 'https://meet.google.com/lookup/danco6xf7j?authuser=',
     'B2 SEMINAR[AC]':'https://meet.google.com/lookup/eoehgugsdv?authuser=',
     'B2 SEMINAR(AC)': 'https://meet.google.com/lookup/c7mwo6raen?authuser=',
@@ -274,7 +279,7 @@ let weekDayNumber = getWeekDayOnlyNumber();
 timeTableDisplay(weekDayNumber);
 
 // selecting all authuser 'li' tag
-allAuthuser = document.querySelectorAll('footer ul.authuser li');
+let allAuthuser = document.querySelectorAll('footer ul.authuser li');
 // adding event listener to each 'li' tag
 allAuthuser.forEach(authUserElement => {
     authUserElement.addEventListener('click', (e)=>{
@@ -286,9 +291,9 @@ allAuthuser.forEach(authUserElement => {
 });
 
 // selecting left,right arrow and 'div#weekDay'
-prevButton = document.querySelector('button.left');
-nextButton = document.querySelector('button.right');
-resetDivButton = document.querySelector('div#weekDay');
+let prevButton = document.querySelector('button.left');
+let nextButton = document.querySelector('button.right');
+let resetDivButton = document.querySelector('div#weekDay');
 
 //Adding event listener to prevButton (left arrow),
 //Decrement the value of weekDayNumber and facilitates the navigation of timetable between days

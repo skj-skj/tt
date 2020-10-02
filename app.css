@@ -3,7 +3,7 @@ body{
 }
 
 p.error{
-    cursor: url("./cursor16px.png"),default;
+    cursor: url("./img_assets/cursor16px.png"),default;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     font-weight: bold;
     font-size: 18px;
