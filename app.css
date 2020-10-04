@@ -1,196 +1,135 @@
+:root{
+    --fontStyle:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
+}
+
 body{
-    background-color: #1E243A;
+    background-color: #1E243A
+}
+
+p.lecItemSplit, p.lecItem, p.error{
+    font-family: var(--fontStyle);
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.75rem;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+    display: block;
+    color: #fff
 }
 
 p.error{
     cursor: url("./img_assets/cursor16px.png"),default;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    box-sizing: inherit;
-    -webkit-tap-highlight-color: transparent;
-    /* background-color: #6AB0E9; */
-    line-height: 1.75rem;
-    padding: 10px 20px;
-    margin: 0;
-    border-bottom: 1px solid #e0e0e0;
-    display: block;
-    transition: .25s;
-    color: #fff;
-    border: 1px solid #fff;
-}
-
-p.lecItemSplit{
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    box-sizing: inherit;
-    -webkit-tap-highlight-color: transparent;
-    /* background-color: #6AB0E9; */
-    line-height: 1.75rem;
-    padding: 10px 20px;
-    margin: 0;
-    border-bottom: 1px solid #e0e0e0;
-    display: block;
-    transition: .25s;
-    color:#e0e0e0;
-    /* color: #fff; */
+    border: 1px solid #fff
 }
 
 a{
     text-decoration: none;
-    color: #fff;
+    color: #fff
 }
 
-p.lecItem{
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    box-sizing: inherit;
-    -webkit-tap-highlight-color: transparent;
-    text-decoration: none;
-    /* background-color: #6AB0E9; */
-    line-height: 1.75rem;
-    padding: 10px 20px;
-    margin: 0;
-    border-bottom: 1px solid #e0e0e0;
-    display: block;
-    transition: .25s;
-    color: #fff;
-}
-
-div.lectures{
+div.lectures, div#weekDay{
     cursor: default;
-    /* line-height: 1.5; */
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-    font-weight: normal;
-    color: #000000de;
-    font-size: 14px;
-    box-sizing: inherit;
-    margin: auto auto 1em auto;
+    font-family: var(--fontStyle);
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    overflow: hidden;
-    position: relative;
     margin-left: 10%;
-    margin-right: 10%;
+    margin-right: 10%
+}
+
+div.lectures p:last-child{
+    border: none
 }
 
 div#weekDay{
     text-align: center;
-    line-height: 1.5;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-    font-weight: normal;
-    color: #000000de;
-    font-size: 14px;
-    box-sizing: inherit;
-    margin: 0 auto 1em auto;
-    /* border: 1px solid #e0e0e0;
-    border-radius: 2px; */
-    overflow: hidden;
-    position: relative;
-    margin-left: 10%;
-    margin-right: 10%;
     border: none;
-
     border-radius: 19px;
     background: #1E243A;
     box-shadow: inset 5px 5px 10px #10131e,
-                inset -5px -5px 10px #2c3556;
-
+                inset -5px -5px 10px #2c3556
 }
 
 span{
-    /* color: blueviolet; */
     color: #c7c7c7;
-    
     padding: 5px;
-    /* margin: 5px; */
-
     border-radius: 16px;
     background: #1E243A;
     box-shadow: inset 3px 3px 5px #10131e,
-                inset -3px -3px 5px #2c3556;
+                inset -3px -3px 5px #2c3556
 }
 
 img#logo{
-    /* text-align: center; */
     width: 75px;
     margin-top: 10px;
     border-radius: 35px;
     box-shadow:  5px 4px 5px #10131e,
-                 -5px -4px 5px #2c3556;
+                 -5px -4px 5px #2c3556
 }
 
 p.weekDay{
-    cursor: default;
-    border-bottom: none;
+    border-bottom: none
 }
 
 /* Video Banner CSS */
 video.video-banner{
     border-radius: 15px;
     box-shadow:  5px 5px 5px #10131e,
-                 -5px -5px 5px #2c3556;
+                 -5px -5px 5px #2c3556
 }
 /* Video Banner CSS End */
 
 /* Authuser CSS */
+
 footer ul.authuser{
     padding-inline-start: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around
 }
+
 footer ul.authuser li{
     cursor:pointer;
     display: flex;
-    /* flex-direction: row;
-    align-items:center; */
     width: 3em;
     height: 3em;
     background-color: #c7c7c7;
     color: #1E243A;
-    border-radius: 25px;
+    border-radius: 25px
 }
 
 footer ul.authuser li p{
     font-size: x-large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--fontStyle);
     font-weight: bolder;
-    text-align: center;
-    margin: auto auto;
+    margin: auto auto
 }
 
 footer ul.authuser li:active{
-    
     background-color: #10131e;
-    color: #c7c7c7;
-
+    color: #c7c7c7
 }
 /* Authuser CSS End */
 
 /* Arrow CSS */
 button {
-    /* -webkit-appearance: none; */
     background: transparent;
     border: 0;
-    outline:0;
+    outline: 0
   }
 
 .arrow:hover polyline,.arrow:active polyline{
-    stroke-width: 6px;
+    stroke-width: 6px
 }
 div.nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 /* Arrow CSS End */
 
 /* Media Query */
-
 @media only screen and (min-width: 414px){
     footer{
         margin: auto auto;
-        width: 400px;
+        width: 400px
     }
 }
