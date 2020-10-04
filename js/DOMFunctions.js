@@ -21,9 +21,9 @@ function aTagDOM(theClass,link,authuser){
     // Creating 'a' Tag for the lecture/period
     let aTag = document.createElement('a');
     aTag.target = '_blank';
+    aTag.rel = 'noreferrer noopener';
     aTag.href = `${link}${authuser}`;
     aTag.append(`${theClass}`);
-
     return aTag;
 }
 
