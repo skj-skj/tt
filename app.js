@@ -100,5 +100,6 @@ nextButton.addEventListener('click',(e)=>{
 
 //Adding event listener to 'div#weekDay' (div where logo is situated)
 resetDivButton.addEventListener('click',(e)=>{
+    weekDayNumber = foo.getWeekDayOnlyNumber();
     timeTableDisplay(foo.getWeekDayOnlyNumber());
 })
