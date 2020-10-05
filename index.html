@@ -1,103 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Essential Meta Tags for Social Media especially Whatsapp  -->
-    <meta property="og:title" content="Time Table b2">
-    <meta property="og:description" content="This is best way to view your Time Table & Join Meetings">
-    <meta property="og:image" itemprop="image" content="//skj-skj.github.io/tt/img_assets/tt-logo-256.jpeg">
-    <meta property="og:url" content="https://skj-skj.github.io/tt">
-    <meta property="og:type" content="website" />
-    <meta property="og:image:type" content="image/jpeg">
-    <!-- Essential Meta End -->
+        <!-- Essential Meta Tags for Social Media especially Whatsapp  -->
+        <meta property="og:title" content="Time Table b2">
+        <meta property="og:description" content="This is best way to view your Time Table & Join Meetings">
+        <meta property="og:image" itemprop="image" content="//skj-skj.github.io/tt/img_assets/tt-logo-256.jpeg">
+        <meta property="og:url" content="https://skj-skj.github.io/tt">
+        <meta property="og:type" content="website" />
+        <meta property="og:image:type" content="image/jpeg">
+        <!-- Essential Meta End -->
 
-    <title>Time Table B2</title>
-    <link rel="shortcut icon" href="./img_assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./app.css">
+        <title>Time Table B2</title>
+        <link rel="shortcut icon" href="./img_assets/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./app.css">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140405862-2"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140405862-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-140405862-2');
+        </script>
+        <!--Google Analytics End-->
 
-    gtag('config', 'UA-140405862-2');
-    </script>
-    <!--Google Analytics End-->
+    </head>
+    <body>
+        <!-- Main Week Day Div -->
+        <header id="weekDay">
+            <p>
+                <img id="logo" src="./img_assets/tt-logo-256.jpeg" alt="TT-Logo">
+            </p>
+            <p class="lecItem weekDay">Monday 🤫</p>
+        </header>
 
-</head>
-<body>
-    
-    <!-- Main Week Day Div -->
-    <div id="weekDay">
-        <p>
-            <img id="logo" src="./img_assets/tt-logo-256.jpeg" alt="TT-Logo">
-        </p>
-    </div>
-
-
-    <div class='nav'>
-    <!-- Left Arrow -->
-    <button class="arrow left">
-        <svg width="30px" height="30px" viewBox="0 0 50 80" xml:space="preserve">
-          <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
-          45.63,75.8 0.375,38.087 45.63,0.375 "/>
-        </svg>  
-    </button>
-
-    <!-- Right Arrow -->
-    <button class="arrow right">
-        <svg width="30px" height="30px" viewBox="0 0 50 80" xml:space="preserve">
-          <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
-          0.375,0.375 45.63,38.087 0.375,75.8 "/>
-        </svg>
-      </button>
-    </div>
-    
-    
-    <!-- Main Lectures div where TimeTable is Displayed -->
-    <div class="lectures">
+        <nav>
+            <!-- Left Arrow -->
+            <button class="arrow left" aria-label="Previous Navigation">
+                <svg width="30px" height="30px" viewBox="0 0 50 80" xml:space="preserve">
+                <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+                45.63,75.8 0.375,38.087 45.63,0.375 "/>
+                </svg>  
+            </button>
         
-    </div>
-
-    <!-- Authuser HTML Element-->
-    <footer>
-        <ul class="authuser">
-            <li><p>0</p></li>
-            <li><p>1</p></li>
-            <li><p>2</p></li>
-            <li><p>3</p></li>
-        </ul>
-    </footer>
-    <!-- Authuser HTML Element End -->
-
-    <!-- Video HTML Element -->
-    <div style="text-align: center;margin-top: 10px; margin-bottom: 10px;">
-        <video class="video-banner" width="256" height="256" autoplay="autoplay" loop muted>
+            <!-- Right Arrow -->
+            <button class="arrow right" aria-label="Next Navigation">
+                <svg width="30px" height="30px" viewBox="0 0 50 80" xml:space="preserve">
+                <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+                0.375,0.375 45.63,38.087 0.375,75.8 "/>
+                </svg>
+            </button>
+        </nav>
+        
+        
+        <!-- Main Lectures div where TimeTable is Displayed -->
+        <div class="lectures">
             
-        </video>
-    </div>
-    <!-- Video HTML Element End-->
-    
-    <!-- Error Message Help -->
-    <div>
-        <p class="error">
-            1) if you get any <span >error</span> first check you are login with the college id.<br/><br/>
-            2) if you get error<br/>
-            <span>"Check your meeting code"</span>
-            iterate the value of '<span>authuser</span>' to <span >0,1,2,3</span> using buttons given below the timetable,
-            by default it is <span >2</span> (cause of error: client having more than one account logged in the browser)
-            
-        </p>
-    </div>
-    <!-- Error Message Help End -->
+        </div>
 
-</body>
-<script type="module" src="./config/config.js"></script>
-<script type="module" src="./js/functions.js"></script>
-<script type="module" src="./js/DOMFunctions.js"></script>
-<script type="module" src="./app.js"></script>
+        <!-- Authuser HTML Element-->
+        <footer>
+            <ul class="authuser">
+                <li><p>0</p></li>
+                <li><p>1</p></li>
+                <li><p>2</p></li>
+                <li><p>3</p></li>
+            </ul>
+        </footer>
+        <!-- Authuser HTML Element End -->
+
+        <!-- Video HTML Element -->
+        <div style="text-align: center;margin-top: 10px; margin-bottom: 10px;" class="videoDiv">
+            <video class="video-banner" width="256" height="256" autoplay="autoplay" loop muted>
+                
+            </video>
+        </div>
+        <!-- Video HTML Element End-->
+        
+        <!-- Error Message Help -->
+        <div>
+            <p class="error">
+                1) if you get any <span >error</span> first check you are login with the college id.<br/><br/>
+                2) if you get error<br/>
+                <span>"Check your meeting code"</span>
+                iterate the value of '<span>authuser</span>' to <span >0,1,2,3</span> using buttons given below the timetable,
+                by default it is <span >2</span> (cause of error: client having more than one account logged in the browser)
+            </p>
+        </div>
+        <!-- Error Message Help End -->
+
+    </body>
+    <script type="module" src="./config/config.js"></script>
+    <script type="module" src="./js/functions.js"></script>
+    <script type="module" src="./js/DOMFunctions.js"></script>
+    <script type="module" src="./app.js"></script>
 </html>

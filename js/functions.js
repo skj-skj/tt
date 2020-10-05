@@ -14,7 +14,6 @@ function getWeekDay() {
 
 //It returns current weekDay Number like 0,1,2...6 where 0 is Sunday, 1 is Monday and so on.
 function getWeekDayOnlyNumber(){
-
     return new Date().getDay();
 }
 
@@ -32,33 +31,11 @@ function getWeekDayNameByNumber(num){
     return weekday[num];
 }
 
-//It is DOM Manipulation fuction for Video Element
-function setVideo(){
-    let videoBanner = document.querySelector('video.video-banner');
-    // empties the videoBanner element
-    videoBanner.pause();
-    videoBanner.innerHTML = "";
-    videoBanner.load();
-
-    let sourceVid = document.createElement('source');
-
-    // Generate Random no between 1-8
-    let num = ((Math.random()*7)+1);
-    num = Math.round(num);
-
-    sourceVid.setAttribute("src",`./assets/${num}.mp4`);
-    sourceVid.setAttribute("type","video/mp4");
-    sourceVid.textContent = "Your browser does not support the video tag.";
-    videoBanner.appendChild(sourceVid);
-}
-
 //It shuffles the given array
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
-  
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-  
       // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
@@ -68,7 +45,6 @@ function shuffle(array) {
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-  
     return array;
   }
 
@@ -81,11 +57,8 @@ function weekDayConverter(weekDay){
     // convert weekDay which is number to weekDay as a name
     // ex: 0 => Sunday, 1 => Monday, 2 => Tuesday etc.
     return getWeekDayNameByNumber(weekDay);
-
 }
 
-
-
 export default{
-    getWeekDay, getWeekDayOnlyNumber, getWeekDayNameByNumber, setVideo, shuffle, weekDayConverter
+    getWeekDay, getWeekDayOnlyNumber, getWeekDayNameByNumber, shuffle, weekDayConverter
 }

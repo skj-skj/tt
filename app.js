@@ -1,25 +1,20 @@
 //Welcome to Time Table B2 Project
 
-// 
-import {timeTableObj,meetLinks,timing} from './config/config.js';
+import {timeTableObj,meetLinks,timing,showVideos} from './config/config.js';
 import foo from './js/functions.js';
 import DOMfoo from './js/DOMFunctions.js';
 
-//It returns current weekDay Name like: Monday,Tuesday etc.
-
-
-//Logo element is Selected used to rebuild the "div#weekDay"
-let logo = document.querySelector('div#weekDay').firstElementChild;
+//foo is for functions which are returning some values
+//DOMfoo is for DOM Manipulation functions
 
 //authuser value used in the meetlink
 let authuser = 2;
 // TODO: save the value of authuser to cookies
 
-
 // variable for current week day number
 let weekDayNumber = foo.getWeekDayOnlyNumber();
 
-
+//Funtion to Display/Render timetable to the HTML
 function timeTableDisplay(weekDay){
 
     DOMfoo.DOMReset(logo);
@@ -35,36 +30,46 @@ function timeTableDisplay(weekDay){
         // Span Tag for Timing Details Display
         let spanTag = DOMfoo.spanTag(timing[lectureNumber]);
         
-
         //When there is multiple classes in one given time period
         if(todayClasses[lectureNumber].includes('or')){
+            // Creating basePTag for Multiple Class using by appending spanTag of timeing and lecture Number
             let basePTagOfMultipleClass = DOMfoo.basePTagOfMultipleClass(spanTag,lectureNumber);
+            // Creating Array of Class in the same time period which are spearated by 'or'
             let theClasses = todayClasses[lectureNumber].split(' or ');
+            // Mapping each class with its anchor Tag using Class name, meetlink, authuser
             let aTags = theClasses.map(theClass => DOMfoo.aTagDOM(theClass,meetLinks[theClass],authuser));
+            // appendig anchor tag to basePTag
             aTags.forEach(aTag => {
                 basePTagOfMultipleClass.append(aTag);
                 basePTagOfMultipleClass.append(' OR ');
             })
+            // removing last child which is OR
             basePTagOfMultipleClass.removeChild(basePTagOfMultipleClass.lastChild);
+            // appending basePTag to the main Div Body
             mainDivBody.appendChild(basePTagOfMultipleClass);
         }
         //When there is only one class in the given time period
         else{
+            // Gets the Class name
             let theClass = todayClasses[lectureNumber];
+            // Creating Anchor Tag of the Class using Class name, meetlink, authuser
             let aTag = DOMfoo.aTagDOM(theClass,meetLinks[theClass],authuser);
+            // Creating basePTag in which appending spanTag, Lecture Number, aTag
             let basePTag = DOMfoo.basePTag(aTag,spanTag,lectureNumber);
-            // appending 'p' tag in mainDivBody
+            // appending basePTag to the main Div Body
             mainDivBody.appendChild(basePTag);
         }
-
-        
-        
     }
 
-    foo.setVideo();
-
+    // TO show videos on the webpage or not, you can set the value in the config/config.js file
+    if(showVideos){
+        DOMfoo.setVideo();
+    }else{
+        DOMfoo.videoHide();
+    }
 }
 
+// Displayes/Render the TimeTable accoring to given week day, here it is current week day
 timeTableDisplay(weekDayNumber)
 
 // selecting all authuser 'li' tag
@@ -82,7 +87,7 @@ allAuthuser.forEach(authUserElement => {
 // selecting left,right arrow and 'div#weekDay'
 let prevButton = document.querySelector('button.left');
 let nextButton = document.querySelector('button.right');
-let resetDivButton = document.querySelector('div#weekDay');
+let resetDivButton = document.querySelector('header');
 
 //Adding event listener to prevButton (left arrow),
 //Decrement the value of weekDayNumber and facilitates the navigation of timetable between days

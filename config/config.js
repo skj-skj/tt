@@ -1,5 +1,4 @@
-//Time Table json in config.js
-// Here tt is time table
+//Time Table in config.js
 
 let timeTableObj = {
     "Monday":{
@@ -74,6 +73,8 @@ let meetLinks = {
 
 let timing = ['0','09:00 AM - 09:50 AM','10:00 AM - 10:50 AM','12:20 PM - 1:10 PM'];
 
+let showVideos = true;
+
 export {
-    timeTableObj,meetLinks,timing,
+    timeTableObj, meetLinks, timing, showVideos
 };
