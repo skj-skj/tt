@@ -71,8 +71,8 @@ function setVideo(){
 
     let sourceVid = document.createElement('source');
 
-    // Generate Random no between 1-8
-    let num = ((Math.random()*7)+1);
+    // Generate Random no between 0-15
+    let num = ((Math.random()*15));
     num = Math.round(num);
 
     sourceVid.setAttribute("src",`./assets/${num}.mp4`);
