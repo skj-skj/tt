@@ -91,9 +91,17 @@ let resetDivButton = document.querySelector('header');
 
 //Adding event listener to prevButton (left arrow),
 //Decrement the value of weekDayNumber and facilitates the navigation of timetable between days
+
 prevButton.addEventListener('click',(e)=>{
     weekDayNumber--;
     timeTableDisplay(weekDayNumber);
+});
+    // Previous week day using Left arrow key
+document.addEventListener('keyup',(e)=>{
+    if(e.code == 'ArrowLeft'){
+        weekDayNumber--;
+        timeTableDisplay(weekDayNumber)
+    }
 });
 
 //Adding event listener to nextButton (right arrow)
@@ -102,10 +110,46 @@ nextButton.addEventListener('click',(e)=>{
     weekDayNumber++;
     timeTableDisplay(weekDayNumber);
 });
+    //Next week day using Right arrow key
+document.addEventListener('keyup',(e)=>{
+    if(e.code == 'ArrowRight'){
+        weekDayNumber++;
+        timeTableDisplay(weekDayNumber)
+    }
+});
 
 //Adding event listener to 'div#weekDay' (div where logo is situated)
 resetDivButton.addEventListener('click',(e)=>{
     //Reset to the current weekday
     weekDayNumber = foo.getWeekDayOnlyNumber();
     timeTableDisplay(foo.getWeekDayOnlyNumber());
-})
+});
+    //Reset using up key
+document.addEventListener('keyup',(e)=>{
+    if(e.code == 'ArrowUp'){
+        //Reset to the current weekday
+        weekDayNumber = foo.getWeekDayOnlyNumber();
+        timeTableDisplay(foo.getWeekDayOnlyNumber());
+    }
+});
+
+//Adding Event Listener to directly join the meet or open links, And set authuser
+document.addEventListener('keyup',(e)=>{
+    if(e.code.includes('Digit') || e.code.includes('Numpad')){
+        var keyNum = e.code.slice(-1);
+        var isNumPad = (e.code.includes('Numpad'))?true:false;
+    }else{
+        return;
+    }
+
+    if(isNumPad){
+        authuser=keyNum;
+        timeTableDisplay(foo.getWeekDayOnlyNumber());
+    }else{
+        let theClass = timeTableObj[foo.getWeekDayNameByNumber(weekDayNumber)][keyNum];
+        if(theClass){
+            window.open(`${meetLinks[theClass]}${authuser}`, '_blank');
+        }
+    }
+});
+
