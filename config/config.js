@@ -59,6 +59,7 @@ By default authuser = 2
 let meetLinks = {
     'CYBER SECURITY LAB (SU)': 'https://meet.google.com/lookup/a75muhyyoa?authuser=',
     'IOT LAB (RB)':'https://meet.google.com/lookup/erowg3243c?authuser=',
+    'Placement Training':'#'
 }
 
 let timing = ['0','09:00 AM - 11:30 AM','12:30 PM - 1:20 PM'];
