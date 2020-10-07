@@ -1,5 +1,69 @@
 //Time Table in config.js
 
+/*
+Subjects:
+B2 PROJECT(KP)
+EEDM(SU) or QM(RJ)
+B2 SEMINAR(RJ)
+IOT(RB)
+VERBAL (Prof. Mamta Sharma)
+VERBAL (Prof. Bhavani Singh)
+QUANT (Prof. Abhishek Karwa)
+Its Sunday
+*/
+/*
+Labs:
+CYBER SECURITY LAB (SU)
+IOT LAB (RB)
+*/
+
+let timeTableObj = {
+    "Monday":{
+        "1": "CYBER SECURITY LAB (SU)",
+    },
+    "Tuesday":{
+        "1": "IOT LAB (RB)",
+    },
+    "Wednesday":{
+        "1": "CYBER SECURITY LAB (SU)",
+    },
+    "Thursday":{
+        "1": "IOT LAB (RB)",
+    },
+    "Friday":{
+        "1": "CYBER SECURITY LAB (SU)",
+    },
+    "Saturday":{
+        "1": "IOT LAB (RB)",
+    },
+    "Sunday":{
+        "1": "Its Sunday"
+    }
+}
+
+/*
+these link are made by using nicknames:
+https://meet.google.com/lookup/nickname
+
+authuser attribute is to specify the account,
+user can have multiple gmail account in one system.
+By default authuser = 2
+*/
+
+let meetLinks = {
+    'CYBER SECURITY LAB (SU)': 'https://meet.google.com/lookup/a75muhyyoa?authuser=',
+    'IOT LAB (RB)':'https://meet.google.com/lookup/erowg3243c?authuser=',
+}
+
+let timing = ['0','09:00 AM - 11:30 AM',];
+
+let showVideos = true;
+
+export {
+    timeTableObj, meetLinks, timing, showVideos
+};
+
+/*
 let timeTableObj = {
     "Monday":{
         "1": "EEDM(SU) or QM(RJ)",
@@ -35,29 +99,11 @@ let timeTableObj = {
         "1": "Its Sunday"
     }
 }
-
-/*
-Subjects:
-B2 PROJECT(KP)
-EEDM(SU) or QM(RJ)
-B2 SEMINAR(RJ)
-IOT(RB)
-VERBAL (Prof. Mamta Sharma)
-VERBAL (Prof. Bhavani Singh)
-QUANT (Prof. Abhishek Karwa)
-Its Sunday
 */
 
+// let timing = ['0','09:00 AM - 09:50 AM','10:00 AM - 10:50 AM','12:20 PM - 1:10 PM'];
 
 /*
-these link are made by using nicknames:
-https://meet.google.com/lookup/nickname
-
-authuser attribute is to specify the account,
-user can have multiple gmail account in one system.
-By default authuser = 2
-*/
-
 let meetLinks = {
     'B2 PROJECT(KP)': 'https://meet.google.com/lookup/danco6xf7j?authuser=',
     'B2 SEMINAR[AC]':'https://meet.google.com/lookup/eoehgugsdv?authuser=',
@@ -70,11 +116,4 @@ let meetLinks = {
     'QUANT (Prof. Abhishek Karwa)': 'https://meet.google.com/lookup/sst_cse_coe?authuser=',
     'Its Sunday': 'https://youtube.com/?'
 }
-
-let timing = ['0','09:00 AM - 09:50 AM','10:00 AM - 10:50 AM','12:20 PM - 1:10 PM'];
-
-let showVideos = true;
-
-export {
-    timeTableObj, meetLinks, timing, showVideos
-};
+*/
