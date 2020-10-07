@@ -20,21 +20,27 @@ IOT LAB (RB)
 let timeTableObj = {
     "Monday":{
         "1": "CYBER SECURITY LAB (SU)",
+        "2": "Placement Training"
     },
     "Tuesday":{
         "1": "IOT LAB (RB)",
+        "2": "Placement Training"
     },
     "Wednesday":{
         "1": "CYBER SECURITY LAB (SU)",
+        "2": "Placement Training"
     },
     "Thursday":{
         "1": "IOT LAB (RB)",
+        "2": "Placement Training"
     },
     "Friday":{
         "1": "CYBER SECURITY LAB (SU)",
+        "2": "Placement Training"
     },
     "Saturday":{
         "1": "IOT LAB (RB)",
+        "2": "Placement Training"
     },
     "Sunday":{
         "1": "Its Sunday"
@@ -55,7 +61,7 @@ let meetLinks = {
     'IOT LAB (RB)':'https://meet.google.com/lookup/erowg3243c?authuser=',
 }
 
-let timing = ['0','09:00 AM - 11:30 AM',];
+let timing = ['0','09:00 AM - 11:30 AM','12:30 PM - 1:20 PM'];
 
 let showVideos = true;
 
