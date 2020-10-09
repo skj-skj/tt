@@ -71,6 +71,8 @@ img#logo{
 }
 
 p.weekDay{
+    position: relative;
+    z-index: 1;
     border-bottom: none
 }
 
