@@ -75,7 +75,7 @@ function setVideo(){
     let num = ((Math.random()*15));
     num = Math.round(num);
 
-    sourceVid.setAttribute("src",`./assets/${num}.mp4`);
+    sourceVid.setAttribute("src",`./assets/video/${num}.mp4`);
     sourceVid.setAttribute("type","video/mp4");
     sourceVid.textContent = "Your browser does not support the video tag.";
     videoBanner.appendChild(sourceVid);

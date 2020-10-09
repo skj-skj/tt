@@ -2,6 +2,11 @@
     --fontStyle:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
 }
 
+@font-face{
+    font-family: SirinStencil-Regular;
+    src: url(./assets/font/SirinStencil-Regular.ttf);
+}
+
 body{
     background-color: #1E243A
 }
@@ -19,7 +24,7 @@ p.lecItemSplit, p.lecItem, p.error{
 }
 
 p.error{
-    cursor: url("./img_assets/cursor16px.png"),default;
+    cursor: url("./assets/image/cursor16px.png"),default;
     border: 1px solid #fff
 }
 
@@ -71,6 +76,11 @@ img#logo{
 }
 
 p.weekDay{
+    /* WeekDay Font Style */
+    font-family: SirinStencil-Regular;
+    font-size: 30px;
+    font-weight: lighter;
+    /* WeekDay Font Style End */
     position: relative;
     z-index: 1;
     border-bottom: none
