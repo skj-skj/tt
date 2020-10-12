@@ -11,10 +11,14 @@ function weekDayDOM(weekDay){
                                           '💻','🔞','💔',])[0]}`;
 }
 
-function aTagDOM(theClass,link,authuser){
+function aTagDOM(theClass,link,authuser,doBlankTarget=true){
+    if(link=='#'){
+        doBlankTarget = false;
+        authuser = '';
+    }
     // Creating 'a' Tag for the lecture/period
     let aTag = document.createElement('a');
-    aTag.target = '_blank';
+    aTag.target = (doBlankTarget)?'_blank':'';
     aTag.rel = 'noreferrer noopener';
     aTag.href = `${link}${authuser}`;
     aTag.append(`${theClass}`);

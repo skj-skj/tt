@@ -53,7 +53,14 @@ function timeTableDisplay(weekDay){
             // Gets the Class name
             let theClass = todayClasses[lectureNumber];
             // Creating Anchor Tag of the Class using Class name, meetlink, authuser
-            let aTag = DOMfoo.aTagDOM(theClass,meetLinks[theClass],authuser);
+            let aTag;
+                //if there is no class
+            if(theClass=='No Class'){
+                aTag = DOMfoo.aTagDOM(theClass,meetLinks[theClass],'');
+            }else{
+                aTag = DOMfoo.aTagDOM(theClass,meetLinks[theClass],authuser);
+            }
+            
             // Creating basePTag in which appending spanTag, Lecture Number, aTag
             let basePTag = DOMfoo.basePTag(aTag,spanTag,lectureNumber);
             // appending basePTag to the main Div Body
