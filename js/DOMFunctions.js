@@ -12,6 +12,8 @@ function weekDayDOM(weekDay){
 }
 
 function aTagDOM(theClass,link,authuser,doBlankTarget=true){
+  //if link is not available then Target won't be _blank to make the experience of the user smooth.
+  //and remove authuser value to reduce any confusion in link
     if(link=='#'){
         doBlankTarget = false;
         authuser = '';
