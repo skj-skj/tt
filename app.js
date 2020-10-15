@@ -154,7 +154,8 @@ document.addEventListener('keyup',(e)=>{
         timeTableDisplay(foo.getWeekDayOnlyNumber());
     }else{
         let theClass = timeTableObj[foo.getWeekDayNameByNumber(weekDayNumber)][keyNum];
-        if(theClass){
+        // open link only for while meetLinks exist.
+        if(theClass && meetLinks[theClass]!='#'){
             window.open(`${meetLinks[theClass]}${authuser}`, '_blank');
         }
     }
