@@ -1,6 +1,38 @@
 :root{
     --fontStyle:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
 }
+/*Background Animation*/
+.bgAnimation {
+    background: linear-gradient(315deg, #1e243a, #2c3556);
+    background-size: 400% 400%;
+
+    -webkit-animation: bgAnimation 60s ease infinite;
+    -moz-animation: bgAnimation 60s ease infinite;
+    -o-animation: bgAnimation 60s ease infinite;
+    animation: bgAnimation 60s ease infinite;
+}
+
+@-webkit-keyframes bgAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes bgAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes bgAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes bgAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+/*Background Animation END*/
 
 @font-face{
     font-family: SirinStencil-Regular;
@@ -53,7 +85,7 @@ header{
     text-align: center;
     border: none;
     border-radius: 19px;
-    background: #1E243A;
+    /* background: #1E243A; */
     box-shadow: inset 5px 5px 10px #10131e,
                 inset -5px -5px 10px #2c3556
 }
