@@ -67,8 +67,10 @@ let timing = ['0','09:00 AM - 11:30 AM','12:30 PM - 1:20 PM'];
 
 let showVideos = true;
 
+let do24HourFormat = false;
+
 export {
-    timeTableObj, meetLinks, timing, showVideos
+    timeTableObj, meetLinks, timing, showVideos, do24HourFormat
 };
 
 /*

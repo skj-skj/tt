@@ -1,6 +1,6 @@
 //Welcome to Time Table B2 Project
 
-import {timeTableObj,meetLinks,timing,showVideos} from './config/config.js';
+import {timeTableObj,meetLinks,timing,showVideos,do24HourFormat} from './config/config.js';
 import foo from './js/functions.js';
 import DOMfoo from './js/DOMFunctions.js';
 
@@ -28,7 +28,7 @@ function timeTableDisplay(weekDay){
         // Select a mainDivBody element which is 'div.lectures'
         let mainDivBody = document.querySelector('div.lectures');
         // Span Tag for Timing Details Display
-        let spanTag = DOMfoo.spanTag(timing[lectureNumber]);
+        let spanTag = DOMfoo.spanTag(timing[lectureNumber],do24HourFormat);
         
         //When there is multiple classes in one given time period
         if(todayClasses[lectureNumber].includes('or')){

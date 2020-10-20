@@ -27,10 +27,18 @@ function aTagDOM(theClass,link,authuser,doBlankTarget=true){
     return aTag;
 }
 
-function spanTag(time){
+function spanTag(time,do24HourFormat){
+    if(do24HourFormat){
+        time = time.split(' - ');
+        time = time.map((element) => {
+            return foo.to24Hour(element);
+        });
+
+        time = `${time[0]} - ${time[1]}`;
+    }
     //Creating 'span' Tag for timing of the lecture/period
     let spanTag = document.createElement('span');
-    spanTag.textContent = `{${time}}`;
+    spanTag.textContent = `{ ${time} }`;
 
     return spanTag;
 }
