@@ -161,3 +161,24 @@ document.addEventListener('keyup',(e)=>{
     }
 });
 
+
+//Join Current Class using Space Bar
+document.addEventListener('keyup',(e)=>{
+    if(e.code == "Space"){
+        let time = foo.getCurrentTimeIn24Hour();
+        // iterating i from 1 to the length of the timeing[], so to iterate over every class
+        for(let i=1; i <timing.length; i++){
+            // Checking if the current time is in the class/lecture/period time range or not.
+            if(foo.isTimeinTheGivenRange(time,timing[i])){
+                // gets the class/lecture/period name according to the current time period range. which can be modify in config.js
+                let theClass = timeTableObj[foo.getWeekDayNameByNumber(weekDayNumber)][i];
+                // if the link is not '#' it will open the meet link in the new window.
+                if(meetLinks[theClass]!="#"){
+                    window.open(`${meetLinks[theClass]}${authuser}`, '_blank');
+                }
+                break;
+            }
+        }
+    }
+});
+

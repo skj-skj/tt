@@ -2,7 +2,7 @@
     --fontStyle:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
 }
 /*Background Animation*/
-.bgAnimation {
+/* .bgAnimation {
     background: linear-gradient(315deg, #1e243a, #2c3556);
     background-size: 400% 400%;
 
@@ -31,7 +31,7 @@
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
-}
+} */
 /*Background Animation END*/
 
 @font-face{
