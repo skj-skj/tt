@@ -38,7 +38,7 @@ function spanTag(time,do24HourFormat){
     }
     //Creating 'span' Tag for timing of the lecture/period
     let spanTag = document.createElement('span');
-    spanTag.textContent = `{ ${time} }`;
+    spanTag.textContent = `// ${time} //`;
 
     return spanTag;
 }
