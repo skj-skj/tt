@@ -136,7 +136,7 @@ function isTimeinTheGivenRange(time,timeRange){
         Example 2 (in 24 hour format): given time = 1:00, timeRange = 21:00 to 2:00
                                         here given time is ine the timeRage and smaller than end time, hence it can't be larger than start time
         */
-        if(time>timeRange[0] || time<timeRange[1]){
+        if(time>=timeRange[0] || time<=timeRange[1]){
             return true;
         }
     }
@@ -149,7 +149,7 @@ function isTimeinTheGivenRange(time,timeRange){
         Example (in 24 hour format): given time = 10:00, timeRange = 9:00 to 12:00
                                     here given time is in the timeRange and given time is bigger than start time and smaller than end time.
         */
-        if(time>timeRange[0] && time<timeRange[1]){
+        if(time>=timeRange[0] && time<=timeRange[1]){
             return true;
         }
     }
