@@ -107,7 +107,8 @@ let meetLinks = {
     'VERBAL (Prof. Mamta Sharma)': 'https://meet.google.com/lookup/ms-sst?authuser=',
     'VERBAL (Prof. Bhavani Singh)': '#',
     'QUANT (Prof. Abhishek Karwa)': 'https://meet.google.com/lookup/sst_cse_coe?authuser=',
-    'No Class': 'https://youtube.com/'
+    'No Class': 'https://youtube.com/',
+    'NULL':'#'
 }
 /*
 let meetLinks = {
@@ -117,14 +118,14 @@ let meetLinks = {
     'No Class': 'https://youtube.com/'
 }*/
 
-let timing = ['0','09:00 AM - 09:50 AM','10:00 AM - 10:50 AM','1:20 PM - 2:10 PM'];
+let timings = ['0','09:00 AM - 09:50 AM','10:00 AM - 10:50 AM','1:20 PM - 2:10 PM'];
 
 let showVideos = true;
 
 let do24HourFormat = false;
 
 export {
-    timeTableObj, meetLinks, timing, showVideos, do24HourFormat
+    timeTableObj, meetLinks, timings, showVideos, do24HourFormat
 };
 
 /*

@@ -51,8 +51,11 @@ function shuffle(array) {
 //weekDay Converter
 function weekDayConverter(weekDay){
     // Generate weekDay between the range of 0-6
-    if(weekDay>6 || weekDay<0){
-        weekDay = Math.abs(weekDay%7);
+    if(weekDay>6){
+        weekDay = weekDay%7;
+    }else if(weekDay<0){
+        //if weekDay is Negative/-ve.
+        weekDay = (7+weekDay%7)%7;
     }
     // convert weekDay which is number to weekDay as a name
     // ex: 0 => Sunday, 1 => Monday, 2 => Tuesday etc.
@@ -159,6 +162,18 @@ function isTimeinTheGivenRange(time,timeRange){
 
 }
 
+function currentClassNumber(timings){
+    let time = getCurrentTimeIn24Hour();
+    // iterating i from 1 to the length of the timeing[], so to iterate over every class
+    for(let i=1; i <timings.length; i++){
+        // Checking if the current time is in the class/lecture/period time range or not.
+        if(isTimeinTheGivenRange(time,timings[i])){
+            return i;
+        }
+    }
+    return -1;
+}
+
 export default{
-    getWeekDay, getWeekDayOnlyNumber, getWeekDayNameByNumber, shuffle, weekDayConverter, getCurrentTimeInAmPm, isTimeinTheGivenRange, to24Hour, timeToDecimal, getCurrentTimeIn24Hour
+    getWeekDay, getWeekDayOnlyNumber, getWeekDayNameByNumber, shuffle, weekDayConverter, getCurrentTimeInAmPm, isTimeinTheGivenRange, to24Hour, timeToDecimal, getCurrentTimeIn24Hour,currentClassNumber
 }

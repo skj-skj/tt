@@ -1,8 +1,9 @@
 //Welcome to Time Table B2 Project
 
-import {timeTableObj,meetLinks,timing,showVideos,do24HourFormat} from './config/config.js';
+import {timeTableObj,meetLinks,timings,showVideos,do24HourFormat} from './config/config.js';
 import foo from './js/functions.js';
 import DOMfoo from './js/DOMFunctions.js';
+import eventFoo from './js/eventListenerFunctions.js';
 
 //foo is for functions which are returning some values
 //DOMfoo is for DOM Manipulation functions
@@ -10,6 +11,9 @@ import DOMfoo from './js/DOMFunctions.js';
 //authuser value used in the meetlink
 let authuser = 2;
 // TODO: save the value of authuser to cookies
+
+//Todays Classes
+let todayClasses;
 
 // variable for current week day number
 let weekDayNumber = foo.getWeekDayOnlyNumber();
@@ -21,14 +25,14 @@ function timeTableDisplay(weekDay){
     weekDay = foo.weekDayConverter(weekDay);
     DOMfoo.weekDayDOM(weekDay);
 
-    let todayClasses = timeTableObj[weekDay];
+    todayClasses = timeTableObj[weekDay];
 
     for(let lectureNumber in todayClasses){
 
         // Select a mainDivBody element which is 'div.lectures'
         let mainDivBody = document.querySelector('div.lectures');
-        // Span Tag for Timing Details Display
-        let spanTag = DOMfoo.spanTag(timing[lectureNumber],do24HourFormat);
+        // Span Tag for timings Details Display
+        let spanTag = DOMfoo.spanTag(timings[lectureNumber],do24HourFormat);
         
         //When there is multiple classes in one given time period
         if(todayClasses[lectureNumber].includes('or')){
@@ -98,47 +102,23 @@ let resetDivButton = document.querySelector('header');
 
 //Adding event listener to prevButton (left arrow),
 //Decrement the value of weekDayNumber and facilitates the navigation of timetable between days
-
-prevButton.addEventListener('click',(e)=>{
+eventFoo.elementAndKeycodeEventBind(prevButton,"ArrowLeft",()=>{
     weekDayNumber--;
     timeTableDisplay(weekDayNumber);
-});
-    // Previous week day using Left arrow key
-document.addEventListener('keyup',(e)=>{
-    if(e.code == 'ArrowLeft'){
-        weekDayNumber--;
-        timeTableDisplay(weekDayNumber)
-    }
 });
 
 //Adding event listener to nextButton (right arrow)
 //Increment the value of weekDayNumber and facilitates the navigation of timetable between days
-nextButton.addEventListener('click',(e)=>{
+eventFoo.elementAndKeycodeEventBind(nextButton,"ArrowRight",()=>{
     weekDayNumber++;
     timeTableDisplay(weekDayNumber);
-});
-    //Next week day using Right arrow key
-document.addEventListener('keyup',(e)=>{
-    if(e.code == 'ArrowRight'){
-        weekDayNumber++;
-        timeTableDisplay(weekDayNumber)
-    }
-});
+})
 
 //Adding event listener to 'div#weekDay' (div where logo is situated)
-resetDivButton.addEventListener('click',(e)=>{
-    //Reset to the current weekday
+eventFoo.elementAndKeycodeEventBind(resetDivButton,"ArrowUp",()=>{
     weekDayNumber = foo.getWeekDayOnlyNumber();
     timeTableDisplay(foo.getWeekDayOnlyNumber());
-});
-    //Reset using up key
-document.addEventListener('keyup',(e)=>{
-    if(e.code == 'ArrowUp'){
-        //Reset to the current weekday
-        weekDayNumber = foo.getWeekDayOnlyNumber();
-        timeTableDisplay(foo.getWeekDayOnlyNumber());
-    }
-});
+})
 
 //Adding Event Listener to directly join the meet or open links, And set authuser
 document.addEventListener('keyup',(e)=>{
@@ -153,7 +133,7 @@ document.addEventListener('keyup',(e)=>{
         authuser=keyNum;
         timeTableDisplay(foo.getWeekDayOnlyNumber());
     }else{
-        let theClass = timeTableObj[foo.getWeekDayNameByNumber(weekDayNumber)][keyNum];
+        let theClass = todayClasses[keyNum];
         // open link only for while meetLinks exis.
         if(theClass && meetLinks[theClass]!='#'){
             window.open(`${meetLinks[theClass]}${authuser}`, '_blank');
@@ -161,24 +141,50 @@ document.addEventListener('keyup',(e)=>{
     }
 });
 
-
 //Join Current Class using Space Bar
 document.addEventListener('keyup',(e)=>{
-    if(e.code == "Space"){
-        let time = foo.getCurrentTimeIn24Hour();
-        // iterating i from 1 to the length of the timeing[], so to iterate over every class
-        for(let i=1; i <timing.length; i++){
-            // Checking if the current time is in the class/lecture/period time range or not.
-            if(foo.isTimeinTheGivenRange(time,timing[i])){
-                // gets the class/lecture/period name according to the current time period range. which can be modify in config.js
-                let theClass = timeTableObj[foo.getWeekDayNameByNumber(weekDayNumber)][i];
-                // if the link is not '#' it will open the meet link in the new window.
-                if(meetLinks[theClass]!="#"){
-                    window.open(`${meetLinks[theClass]}${authuser}`, '_blank');
-                }
-                break;
-            }
+    if(e.code == "Space" && !e.ctrlKey){
+        let currentClassNumber = foo.currentClassNumber(timings)
+        let theClass = (currentClassNumber!=-1)?todayClasses[currentClassNumber]:"NULL";
+        let link = meetLinks[theClass];
+        if(link!="#" && !theClass.includes('or')){
+            window.open(`${link}${authuser}`, '_blank');
         }
     }
 });
 
+//Navigate Through Current Class/Lecture/Period which are/have 'OR'
+let orClassCounter= 0;
+let aTags;
+let orJoinLink="#";
+document.addEventListener('keyup',(e)=>{
+    if(e.ctrlKey && e.code=="Space"){
+        let currentClassNumber = foo.currentClassNumber(timings);
+        let theClass = (currentClassNumber!=-1)?todayClasses[currentClassNumber]:"NULL";
+        
+        if(theClass.includes('or')){
+            let totalClassesInCurrentPeriod = theClass.split(' or ').length;
+            let iterateValue = orClassCounter%totalClassesInCurrentPeriod;
+            let iterateValuePlusOne = (orClassCounter+1)%totalClassesInCurrentPeriod;
+            aTags = document.querySelectorAll("p.lecItemSplit a");
+            aTags[iterateValue].style = "border:1px solid #fff !important;";
+            orJoinLink = aTags[iterateValue].href;
+            aTags[iterateValuePlusOne].style = "";
+            orClassCounter++;
+        }
+    }
+    
+    if(e.code=="ControlLeft" && aTags!=null){
+        aTags.forEach((element)=>{
+            element.style="";
+        });
+        
+    }
+    
+    if(e.code=="ControlLeft" && orJoinLink!="#" ){
+        orClassCounter=0;
+        aTags=null;
+        window.open(orJoinLink, '_blank');
+        orJoinLink="#";
+    }
+});
