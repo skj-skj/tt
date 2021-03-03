@@ -45,7 +45,9 @@ function shuffle(array) {
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-    return array;
+
+    // return array.sort( ()=> .5 - Math.random());
+    return array
   }
 
 //weekDay Converter
