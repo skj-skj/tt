@@ -14,7 +14,7 @@ function weekDayDOM(weekDay){
 function aTagDOM(theClass,link,authuser,doBlankTarget=true){
   //if link is not available then Target won't be _blank to make the experience of the user smooth.
   //and remove authuser value to reduce any confusion in link
-    if(link=='#' || link==''){
+    if(link=='#'){
         doBlankTarget = false;
         authuser = '';
     }
@@ -22,7 +22,12 @@ function aTagDOM(theClass,link,authuser,doBlankTarget=true){
     let aTag = document.createElement('a');
     aTag.target = (doBlankTarget)?'_blank':'';
     aTag.rel = 'noreferrer noopener';
-    aTag.href = `${link}${authuser}`;
+
+    if(link!='#'){
+        aTag.href = `${link}${authuser}`;
+    }
+
+    
     aTag.append(`${theClass}`);
     return aTag;
 }

@@ -125,17 +125,18 @@ By default authuser = 2
 // }
 
 let meetLinks = {
-    'Self Guided Project':'',
-    'SC Lt-21':'',
-    'F&S Lt-1':'',
-    'CM':'',
-    'BDA (JG) Lt-3':'',
-    'Big Data Lab (JG) Lab-3':'',
-    'TM (RB) Lt-3':'',
-    'Project Lab (KP) Lab-8':'',
-    'BDA (JG) Lt-2':'',
-    'Project Lab (KP) Lab-5':'',
-    'STV Lab (RJ) Lab-2':'',
+    'Self Guided Project':'#',
+    'SC Lt-21':'#',
+    'F&S Lt-1':'#',
+    'CM':'#',
+    'BDA (JG) Lt-3':'#',
+    'Big Data Lab (JG) Lab-3':'#',
+    'TM (RB) Lt-3':'#',
+    'Project Lab (KP) Lab-8':'#',
+    'BDA (JG) Lt-2':'#',
+    'Project Lab (KP) Lab-5':'#',
+    'STV Lab (RJ) Lab-2':'#',
+    'No Class':'#'
 }
 
 /*
