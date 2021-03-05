@@ -1,12 +1,34 @@
 //Welcome to Time Table B2 Project
 
-import {timeTableObj,meetLinks,timings,showVideos,do24HourFormat} from './config/config.js';
+import {showVideos,do24HourFormat,apiLinks} from './config/config.js';
+//foo is for functions which are returning some values
+//DOMfoo is for DOM Manipulation functions
 import foo from './js/functions.js';
 import DOMfoo from './js/DOMFunctions.js';
 import eventFoo from './js/eventListenerFunctions.js';
 
-//foo is for functions which are returning some values
-//DOMfoo is for DOM Manipulation functions
+
+async function getMeetLinksData(){
+    const response = await fetch(apiLinks["links"]);
+    let data = await response.json();
+    return data;
+}
+
+async function getTimingsData(){
+    const response = await fetch(apiLinks["timings"]);
+    let data = await response.json();
+    return data.timings;
+}
+
+async function getTTData(){
+    const response = await fetch(apiLinks["tt"]);
+    let data = await response.json();
+    return data;
+}
+
+let meetLinks = await getMeetLinksData();
+let timings = await getTimingsData();
+let timeTableObj = await getTTData();
 
 //authuser value used in the meetlink
 let authuser = 2;
@@ -20,7 +42,6 @@ let weekDayNumber = foo.getWeekDayOnlyNumber();
 
 //Funtion to Display/Render timetable to the HTML
 function timeTableDisplay(weekDay){
-
     DOMfoo.DOMReset(logo);
     weekDay = foo.weekDayConverter(weekDay);
     DOMfoo.weekDayDOM(weekDay);
@@ -28,14 +49,13 @@ function timeTableDisplay(weekDay){
     todayClasses = timeTableObj[weekDay];
 
     for(let lectureNumber in todayClasses){
-
         // Select a mainDivBody element which is 'div.lectures'
         let mainDivBody = document.querySelector('div.lectures');
         // Span Tag for timings Details Display
         let spanTag = DOMfoo.spanTag(timings[lectureNumber],do24HourFormat);
         
         //When there is multiple classes in one given time period
-        if(todayClasses[lectureNumber].includes('or')){
+        if(todayClasses[lectureNumber].includes(' or ')){
             // Creating basePTag for Multiple Class using by appending spanTag of timeing and lecture Number
             let basePTagOfMultipleClass = DOMfoo.basePTagOfMultipleClass(spanTag,lectureNumber);
             // Creating Array of Class in the same time period which are spearated by 'or'
@@ -81,7 +101,7 @@ function timeTableDisplay(weekDay){
 }
 
 // Displayes/Render the TimeTable accoring to given week day, here it is current week day
-timeTableDisplay(weekDayNumber)
+timeTableDisplay(weekDayNumber);
 
 // selecting all authuser 'li' tag
 let allAuthuser = document.querySelectorAll('footer ul.authuser li');

@@ -51,54 +51,54 @@ let timeTableObj = {
 */
 
 
-let timeTableObj = {
-    "Monday":{
-        "1": "Self Guided Project",
-        "2": "Self Guided Project",
-        "3": "Self Guided Project",
-        "4": "SC Lt-21 or F&S Lt-1 or CM",
-        "5": "BDA (JG) Lt-3",
-        "6": "Big Data Lab (JG) Lab-3"
-    },
-    "Tuesday":{
-        "1": "BDA (JG) Lt-3",
-        "2": "TM (RB) Lt-3",
-        "3": "Self Guided Project",
-        "4": "SC Lt-21 or F&S Lt-1 or CM",
-        "5": "Big Data Lab (JG) Lab-3",
-        "6": "Big Data Lab (JG) Lab-3"
-    },
-    "Wednesday":{
-        "1": "Project Lab (KP) Lab-8",
-        "2": "Project Lab (KP) Lab-8",
-        "3": "Self Guided Project",
-        "4": "SC Lt-21 or F&S Lt-1 or CM",
-        "5": "BDA (JG) Lt-2",
-        "6": "Self Guided Project"
-    },
-    "Thursday":{
-        "1": "BDA (JG) Lt-2",
-        "2": "Self Guided Project",
-        "3": "Self Guided Project",
-        "4": "SC Lt-21 or F&S Lt-1 or CM",
-        "5": "Project Lab (KP) Lab-5",
-        "6": "Project Lab (KP) Lab-5"
-    },
-    "Friday":{
-        "1": "No Class"
-    },
-    "Saturday":{
-        "1": "Project Lab (KP) Lab-8",
-        "2": "Project Lab (KP) Lab-8",
-        "3": "Self Guided Project",
-        "4": "STV Lab (RJ) Lab-2",
-        "5": "STV Lab (RJ) Lab-2",
-        "6": "STV Lab (RJ) Lab-2"
-    },
-    "Sunday":{
-        "1": "No Class"
-    }
-}
+// let timeTableObj = {
+//     "Monday":{
+//         "1": "Self Guided Project",
+//         "2": "Self Guided Project",
+//         "3": "Self Guided Project",
+//         "4": "SC Lt-21 or F&S Lt-1 or CM",
+//         "5": "BDA (JG) Lt-3",
+//         "6": "Big Data Lab (JG) Lab-3"
+//     },
+//     "Tuesday":{
+//         "1": "BDA (JG) Lt-3",
+//         "2": "TM (RB) Lt-3",
+//         "3": "Self Guided Project",
+//         "4": "SC Lt-21 or F&S Lt-1 or CM",
+//         "5": "Big Data Lab (JG) Lab-3",
+//         "6": "Big Data Lab (JG) Lab-3"
+//     },
+//     "Wednesday":{
+//         "1": "Project Lab (KP) Lab-8",
+//         "2": "Project Lab (KP) Lab-8",
+//         "3": "Self Guided Project",
+//         "4": "SC Lt-21 or F&S Lt-1 or CM",
+//         "5": "BDA (JG) Lt-2",
+//         "6": "Self Guided Project"
+//     },
+//     "Thursday":{
+//         "1": "BDA (JG) Lt-2",
+//         "2": "Self Guided Project",
+//         "3": "Self Guided Project",
+//         "4": "SC Lt-21 or F&S Lt-1 or CM",
+//         "5": "Project Lab (KP) Lab-5",
+//         "6": "Project Lab (KP) Lab-5"
+//     },
+//     "Friday":{
+//         "1": "No Class"
+//     },
+//     "Saturday":{
+//         "1": "Project Lab (KP) Lab-8",
+//         "2": "Project Lab (KP) Lab-8",
+//         "3": "Self Guided Project",
+//         "4": "STV Lab (RJ) Lab-2",
+//         "5": "STV Lab (RJ) Lab-2",
+//         "6": "STV Lab (RJ) Lab-2"
+//     },
+//     "Sunday":{
+//         "1": "No Class"
+//     }
+// }
 
 
 /*
@@ -124,20 +124,25 @@ By default authuser = 2
 //     'NULL':'#'
 // }
 
-let meetLinks = {
-    'Self Guided Project':'#',
-    'SC Lt-21':'#',
-    'F&S Lt-1':'#',
-    'CM':'#',
-    'BDA (JG) Lt-3':'#',
-    'Big Data Lab (JG) Lab-3':'#',
-    'TM (RB) Lt-3':'#',
-    'Project Lab (KP) Lab-8':'#',
-    'BDA (JG) Lt-2':'#',
-    'Project Lab (KP) Lab-5':'#',
-    'STV Lab (RJ) Lab-2':'#',
-    'No Class':'#'
-}
+// let meetLinks = {
+//     'Self Guided Project':'#',
+//     'SC Lt-21':'#',
+//     'F&S Lt-1':'#',
+//     'CM':'#',
+//     'BDA (JG) Lt-3':'#',
+//     'Big Data Lab (JG) Lab-3':'#',
+//     'TM (RB) Lt-3':'#',
+//     'Project Lab (KP) Lab-8':'#',
+//     'BDA (JG) Lt-2':'#',
+//     'Project Lab (KP) Lab-5':'#',
+//     'STV Lab (RJ) Lab-2':'#',
+//     'No Class':'#'
+// }
+// let meetLinks = {}
+// fetch("http://localhost:3000/tt-old/link-null",{}).then(response => meetLinks = response.json());
+// fetch("http://localhost:3000/tt-old/link-null")
+//   .then(response => response.json())
+//   .then(data => meetLinks = data);
 
 /*
 
@@ -148,14 +153,26 @@ let meetLinks = {
     'No Class': 'https://youtube.com/'
 }*/
 
-let timings = ['0','08:00 AM - 09:00 AM','09:00 AM - 10:00 AM','10:00 AM - 11:00 AM','11:40 AM - 12:40 PM','12:40 PM - 1:40 PM','1:40 PM - 2:40 PM'];
+// let timings 
+// // = ['0','08:00 AM - 09:00 AM','09:00 AM - 10:00 AM','10:00 AM - 11:00 AM','11:40 AM - 12:40 PM','12:40 PM - 1:40 PM','1:40 PM - 2:40 PM'];
+// fetch("http://localhost:3000/tt-old/timings")
+//   .then(response => response.json())
+//   .then(data => {timings = data.timings;console.log(timings)});
 
 let showVideos = true;
 
 let do24HourFormat = false;
 
+let apiEndPoint = "https://mysterious-falls-79744.herokuapp.com";
+
+let apiLinks = {
+    "tt":`${apiEndPoint}/tt-old/tt`,
+    "links":`${apiEndPoint}/tt-old/link-null`,
+    "timings":`${apiEndPoint}/tt-old/timings`
+}
+
 export {
-    timeTableObj, meetLinks, timings, showVideos, do24HourFormat
+     showVideos, do24HourFormat,apiLinks
 };
 
 /*
