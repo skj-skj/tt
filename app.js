@@ -55,9 +55,12 @@ let weekDayNumber = foo.getWeekDayOnlyNumber();
 
 //Funtion to Display/Render timetable to the HTML
 async function timeTableDisplay(weekDay) {
-    meetLinks = await getMeetLinksData();
-    timings = await getTimingsData();
-    timeTableObj = await getTTData();
+    if(meetLinks==undefined || timings==undefined || timeTableObj == undefined){
+        meetLinks = await getMeetLinksData();
+        timings = await getTimingsData();
+        timeTableObj = await getTTData();
+    }
+    
 
     DOMfoo.DOMReset(logo);
     weekDay = foo.weekDayConverter(weekDay);
