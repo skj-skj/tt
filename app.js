@@ -55,10 +55,13 @@ let weekDayNumber = foo.getWeekDayOnlyNumber();
 
 //Funtion to Display/Render timetable to the HTML
 async function timeTableDisplay(weekDay) {
+    
     if(meetLinks==undefined || timings==undefined || timeTableObj == undefined){
+        DOMfoo.addProgressBar();
         meetLinks = await getMeetLinksData();
         timings = await getTimingsData();
         timeTableObj = await getTTData();
+        DOMfoo.removeProgressBar();
     }
     
 
@@ -68,7 +71,7 @@ async function timeTableDisplay(weekDay) {
 
     todayClasses = timeTableObj[weekDay];
 
-    for (let lectureNumber in todayClasses) {
+    for (let lectureNumber in todayClasses){
         // Select a mainDivBody element which is 'div.lectures'
         let mainDivBody = document.querySelector("div.lectures");
         // Span Tag for timings Details Display
@@ -79,7 +82,7 @@ async function timeTableDisplay(weekDay) {
             // Creating basePTag for Multiple Class using by appending spanTag of timeing and lecture Number
             let basePTagOfMultipleClass = DOMfoo.basePTagOfMultipleClass(
                 spanTag,
-                lectureNumber
+                lectureNumber,timings
             );
             // Creating Array of Class in the same time period which are spearated by 'or'
             let theClasses = todayClasses[lectureNumber].split(" or ");
@@ -113,12 +116,11 @@ async function timeTableDisplay(weekDay) {
             }
 
             // Creating basePTag in which appending spanTag, Lecture Number, aTag
-            let basePTag = DOMfoo.basePTag(aTag, spanTag, lectureNumber);
+            let basePTag = DOMfoo.basePTag(aTag, spanTag, lectureNumber,timings);
             // appending basePTag to the main Div Body
             mainDivBody.appendChild(basePTag);
         }
     }
-
     // TO show videos on the webpage or not, you can set the value in the config/config.js file
     if (showVideos) {
         DOMfoo.setVideo();
@@ -129,7 +131,6 @@ async function timeTableDisplay(weekDay) {
 
 // Displayes/Render the TimeTable accoring to given week day, here it is current week day
 timeTableDisplay(weekDayNumber);
-
 // selecting all authuser 'li' tag
 let allAuthuser = document.querySelectorAll("footer ul.authuser li");
 // adding event listener to each 'li' tag

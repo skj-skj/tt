@@ -48,10 +48,16 @@ function spanTag(time,do24HourFormat){
     return spanTag;
 }
 
-function basePTag(aTag,spanTag,lectureNumber){
+function basePTag(aTag,spanTag,lectureNumber,timings){
     //Creating base 'p' Tag
     let basePTag = document.createElement('p');
-    basePTag.className = 'lecItem';
+    basePTag.className = `lecItem`;
+
+    //To Highlight Current Lecture according to current time
+    if(lectureNumber==foo.currentClassNumber(timings)){
+        basePTag.style = "border-left: 20px white ridge;"
+    }
+
     // appending in basePTag
     basePTag.append(spanTag);
     basePTag.append(document.createElement('br'));
@@ -60,9 +66,15 @@ function basePTag(aTag,spanTag,lectureNumber){
     return basePTag;
 }
 
-function basePTagOfMultipleClass(spanTag,lectureNumber){
+function basePTagOfMultipleClass(spanTag,lectureNumber,timings){
     let basePTag  = document.createElement('p');
-    basePTag.className = 'lecItemSplit'
+    basePTag.className = `lecItemSplit`;
+
+    //To Highlight Current Lecture according to current time
+    if(lectureNumber==foo.currentClassNumber(timings)){
+        basePTag.style = "border-left: 20px white ridge;"
+    }
+
     basePTag.appendChild(spanTag);
     basePTag.append(document.createElement('br'));
     basePTag.append(` ${lectureNumber}) `);
@@ -100,6 +112,24 @@ function setVideo(){
     videoBanner.appendChild(sourceVid);
 }
 
+//Add Indeterministic Progress Bar in the DOM
+function addProgressBar(){
+    let progressBar = document.createElement("progress");
+    let progressBarDiv = document.createElement("div");
+    progressBarDiv.style.textAlign = "center";
+    progressBarDiv.className = "progress-div";
+    progressBarDiv.appendChild(progressBar);
+    let mainDivBody = document.querySelector("#weekDay");
+    mainDivBody.appendChild(progressBarDiv);
+}
+
+//Remove Indeterministic Progress Bar from the DOM
+function removeProgressBar(){
+    let progressBarDiv = document.querySelector(".progress-div");
+    progressBarDiv.remove();
+}
+
+
 export default{
-    weekDayDOM, aTagDOM, spanTag, basePTag, basePTagOfMultipleClass, DOMReset, videoHide, setVideo
+    weekDayDOM, aTagDOM, spanTag, basePTag, basePTagOfMultipleClass, DOMReset, videoHide, setVideo, addProgressBar,removeProgressBar
 };
