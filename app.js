@@ -1,39 +1,44 @@
 //Welcome to Time Table B2 Project
 
-import { showVideos, do24HourFormat, apiLinks } from "./config/config.js";
+import {
+    showVideos,
+    do24HourFormat,
+    timeTableObj,
+    meetLinks,
+    timings,
+} from "./config/config.js";
 //foo is for functions which are returning some values
 //DOMfoo is for DOM Manipulation functions
 import foo from "./js/functions.js";
 import DOMfoo from "./js/DOMFunctions.js";
 import eventFoo from "./js/eventListenerFunctions.js";
 
-
 //Async funtions to get api data
 //Get meetlink data
-async function getMeetLinksData() {
-    const response = await fetch(apiLinks["links"]);
-    let data = await response.json();
-    return data;
-}
+// async function getMeetLinksData() {
+//     const response = await fetch(apiLinks["links"]);
+//     let data = await response.json();
+//     return data;
+// }
 
 //Get timings data
-async function getTimingsData() {
-    const response = await fetch(apiLinks["timings"]);
-    let data = await response.json();
-    return data.timings;
-}
+// async function getTimingsData() {
+//     const response = await fetch(apiLinks["timings"]);
+//     let data = await response.json();
+//     return data.timings;
+// }
 
 //Get TT data
-async function getTTData() {
-    const response = await fetch(apiLinks["tt"]);
-    let data = await response.json();
-    return data;
-}
+// async function getTTData() {
+//     const response = await fetch(apiLinks["tt"]);
+//     let data = await response.json();
+//     return data;
+// }
 
 //Declaring variable for meetlinks,timing,tt
-let meetLinks;
-let timings;
-let timeTableObj;
+// let meetLinks;
+// let timings;
+// let timeTableObj;
 // (async ()=>{
 //     meetLinks = await getMeetLinksData();
 //     timings = await getTimingsData();
@@ -54,16 +59,18 @@ let todayClasses;
 let weekDayNumber = foo.getWeekDayOnlyNumber();
 
 //Funtion to Display/Render timetable to the HTML
-async function timeTableDisplay(weekDay) {
-    
-    if(meetLinks==undefined || timings==undefined || timeTableObj == undefined){
-        DOMfoo.addProgressBar();
-        meetLinks = await getMeetLinksData();
-        timings = await getTimingsData();
-        timeTableObj = await getTTData();
-        DOMfoo.removeProgressBar();
-    }
-    
+function timeTableDisplay(weekDay) {
+    // if (
+    //     meetLinks == undefined ||
+    //     timings == undefined ||
+    //     timeTableObj == undefined
+    // ) {
+    //     DOMfoo.addProgressBar();
+    //     meetLinks = await getMeetLinksData();
+    //     timings = await getTimingsData();
+    //     timeTableObj = await getTTData();
+    //     DOMfoo.removeProgressBar();
+    // }
 
     DOMfoo.DOMReset(logo);
     weekDay = foo.weekDayConverter(weekDay);
@@ -71,7 +78,7 @@ async function timeTableDisplay(weekDay) {
 
     todayClasses = timeTableObj[weekDay];
 
-    for (let lectureNumber in todayClasses){
+    for (let lectureNumber in todayClasses) {
         // Select a mainDivBody element which is 'div.lectures'
         let mainDivBody = document.querySelector("div.lectures");
         // Span Tag for timings Details Display
@@ -82,7 +89,8 @@ async function timeTableDisplay(weekDay) {
             // Creating basePTag for Multiple Class using by appending spanTag of timeing and lecture Number
             let basePTagOfMultipleClass = DOMfoo.basePTagOfMultipleClass(
                 spanTag,
-                lectureNumber,timings
+                lectureNumber,
+                timings
             );
             // Creating Array of Class in the same time period which are spearated by 'or'
             let theClasses = todayClasses[lectureNumber].split(" or ");
@@ -116,7 +124,12 @@ async function timeTableDisplay(weekDay) {
             }
 
             // Creating basePTag in which appending spanTag, Lecture Number, aTag
-            let basePTag = DOMfoo.basePTag(aTag, spanTag, lectureNumber,timings);
+            let basePTag = DOMfoo.basePTag(
+                aTag,
+                spanTag,
+                lectureNumber,
+                timings
+            );
             // appending basePTag to the main Div Body
             mainDivBody.appendChild(basePTag);
         }
