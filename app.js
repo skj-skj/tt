@@ -49,7 +49,7 @@ import eventFoo from "./js/eventListenerFunctions.js";
 // })();
 
 //authuser value used in the meetlink
-let authuser = 2;
+let authuser = '';
 // TODO: save the value of authuser to cookies
 
 //Todays Classes
@@ -210,7 +210,7 @@ document.addEventListener("keyup", (e) => {
             currentClassNumber != -1
                 ? todayClasses[currentClassNumber]
                 : "NULL";
-        let link = meetLinks[theClass];
+        let link = meetLinks[theClass] ?? '#';
         if (link != "#" && !theClass.includes("or")) {
             window.open(`${link}${authuser}`, "_blank");
         }
@@ -236,7 +236,7 @@ document.addEventListener("keyup", (e) => {
                 (orClassCounter + 1) % totalClassesInCurrentPeriod;
             aTags = document.querySelectorAll("p.lecItemSplit a");
             aTags[iterateValue].style = "border:1px solid #fff !important;";
-            orJoinLink = aTags[iterateValue].href;
+            orJoinLink = aTags[iterateValue].href ?? "#";
             aTags[iterateValuePlusOne].style = "";
             orClassCounter++;
         }
