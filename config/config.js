@@ -17,55 +17,55 @@ CYBER SECURITY LAB (SU)
 IOT LAB (RB)
 */
 
-let timeTableObj = {
-    Monday: {
-        1: "Self Guided Project None",
-        2: "Project Lab (KP) Lab-8",
-        3: "Project Lab (KP) Lab-8",
-        4: "~~~Break~~~",
-        5: "SC Lt-21/11 or F&S Lt-2",
-        6: "BDA (JG) Lt-2",
-        7: "Self Guided Project None",
-    },
-    Tuesday: {
-        1: "BDA (JG) Lt-2",
-        2: "TM (NF2) Lt-2",
-        3: "Self Guided Project None",
-        4: "~~~Break~~~",
-        5: "SC Lt-21/11 or F&S Lt-2",
-        6: "Project Lab (KP) Lab-8",
-        7: "Project Lab (KP) Lab-8",
-    },
-    Wednesday: {
-        1: "STV Lab (RJ) Lab-2",
-        2: "STV Lab (RJ) Lab-2",
-        3: "STV Lab (RJ) Lab-2",
-        4: "~~~Break~~~",
-        5: "SC Lt-21/11 or F&S Lt-2",
-        6: "Self Guided Project None",
-        7: "Self Guided Project None",
-    },
-    Thursday: {
-        1: "BDA (JG) Lt-3",
-        2: "Self Guided Project None",
-        3: "Self Guided Project None",
-        4: "~~~Break~~~",
-        5: "SC Lt-21/11 or F&S Lt-2",
-        6: "Project Lab (KP) Lab-5",
-        7: "Project Lab (KP) Lab-5",
-    },
-    Friday: {
-        1: "BDA (JG) Lt-2",
-        2: "Self Guided Project None",
-        3: "Self Guided Project None",
-        4: "~~~Break~~~",
-        5: "Big Data Lab (JG) Lab-1",
-        6: "Big Data Lab (JG) Lab-1",
-        7: "Big Data Lab (JG) Lab-1",
-    },
-    Saturday: { 1: "No Class None" },
-    Sunday: { 1: "No Class None" },
-};
+// let timeTableObj = {
+//     Monday: {
+//         1: "Self Guided Project None",
+//         2: "Project Lab (KP) Lab-8",
+//         3: "Project Lab (KP) Lab-8",
+//         4: "~~~Break~~~",
+//         5: "SC Lt-21/11 or F&S Lt-2",
+//         6: "BDA (JG) Lt-2",
+//         7: "Self Guided Project None",
+//     },
+//     Tuesday: {
+//         1: "BDA (JG) Lt-2",
+//         2: "TM (NF2) Lt-2",
+//         3: "Self Guided Project None",
+//         4: "~~~Break~~~",
+//         5: "SC Lt-21/11 or F&S Lt-2",
+//         6: "Project Lab (KP) Lab-8",
+//         7: "Project Lab (KP) Lab-8",
+//     },
+//     Wednesday: {
+//         1: "STV Lab (RJ) Lab-2",
+//         2: "STV Lab (RJ) Lab-2",
+//         3: "STV Lab (RJ) Lab-2",
+//         4: "~~~Break~~~",
+//         5: "SC Lt-21/11 or F&S Lt-2",
+//         6: "Self Guided Project None",
+//         7: "Self Guided Project None",
+//     },
+//     Thursday: {
+//         1: "BDA (JG) Lt-3",
+//         2: "Self Guided Project None",
+//         3: "Self Guided Project None",
+//         4: "~~~Break~~~",
+//         5: "SC Lt-21/11 or F&S Lt-2",
+//         6: "Project Lab (KP) Lab-5",
+//         7: "Project Lab (KP) Lab-5",
+//     },
+//     Friday: {
+//         1: "BDA (JG) Lt-2",
+//         2: "Self Guided Project None",
+//         3: "Self Guided Project None",
+//         4: "~~~Break~~~",
+//         5: "Big Data Lab (JG) Lab-1",
+//         6: "Big Data Lab (JG) Lab-1",
+//         7: "Big Data Lab (JG) Lab-1",
+//     },
+//     Saturday: { 1: "No Class None" },
+//     Sunday: { 1: "No Class None" },
+// };
 
 // let timeTableObj = {
 //     "Monday":{
@@ -125,19 +125,61 @@ user can have multiple gmail account in one system.
 By default authuser = 2
 */
 
+let timeTableObj = {
+    Monday: {
+        1: "Self Guided Project None",
+        2: "Project Lab (KP) Lab-8",
+        3: "Project Lab (KP) Lab-8",
+        4:"~~~Break~~~",
+        5: "SC (RC) Lt-21/11 or F&S (CS) Lt-2",
+        6: "BDA (JG) Lt-2",
+        7: "Self Guided Project None",
+    },
+    Tuesday: {
+        1: "No Class None",
+    },
+    Wednesday: {
+        1: "STV Lab (RJ) Lab-8",
+        2: "STV Lab (RJ) Lab-8",
+        3: "STV Lab (RJ) Lab-8",
+        4:"~~~Break~~~",
+        5: "SC (RC) Lt-21/11 or F&S (CS) Lt-2",
+        6: "SC (RC) Lt-21/11 or Self Guided Project None",
+        7: "BDA (JG) Lt-2",
+    },
+    Thursday: {
+        1: "No Class None",
+    },
+    Friday: {
+        1: "No Class None",
+    },
+    Saturday: {
+        1: "BDA (JG) Lt-2",
+        2: "SC (RC) Lt-21/11 or Self Guided Project None",
+        3: "F&S (CS) Lt-2",
+        4:"~~~Break~~~",
+        5: "Big Data Lab (JG) Lab-1",
+        6: "Big Data Lab (JG) Lab-1",
+        7: "Big Data Lab (JG) Lab-1",
+    },
+    Sunday: {
+        1: "No Class None",
+    },
+};
+
 let meetLinks = {
     "Self Guided Project None": "#",
-    "SC Lt-21/11": "#",
-    "F&S Lt-2": "#",
+    "SC (RC) Lt-21/11": "#",
+    "F&S (CS) Lt-2": "#",
     "BDA (JG) Lt-3": "#",
     "BDA (JG) Lt-2": "#",
     "Big Data Lab (JG) Lab-1": "#",
     "TM (NF2) Lt-3": "#",
     "Project Lab (KP) Lab-8": "#",
     "Project Lab (KP) Lab-5": "#",
-    "STV Lab (RJ) Lab-2": "#",
+    "STV Lab (RJ) Lab-8": "#",
     "No Class None": "#",
-    "~~~Break~~~":"#"
+    "~~~Break~~~": "#",
 };
 
 // let meetLinks = {
