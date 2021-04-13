@@ -78,18 +78,13 @@ user can have multiple gmail account in one system.
 By default authuser = 2
 */
 let meetLinks = {
-    "Self Guided Project None": "#",
-    "SC (RC) Lt-21/11": "#",
-    "F&S (CS) Lt-2": "#",
-    "BDA (JG) Lt-3": "#",
-    "BDA (JG) Lt-2": "#",
-    "Big Data Lab (JG) Lab-1": "#",
-    "TM (NF2) Lt-3": "#",
-    "Project Lab (KP) Lab-8": "#",
-    "Project Lab (KP) Lab-5": "#",
-    "STV Lab (RJ) Lab-8": "#",
-    "No Class None": "#",
+    "Project Lab (KP) None": "https://meet.google.com/lookup/danco6xf7j?authuser=",
+    "BDA (RG) None": "#",
     "~~~Break~~~": "#",
+    "No Class": "#",
+    "SC (RC) None or F&S (GG) None": "#",
+    "BDA Lab (RG) None": "#",
+    "STV Lab (HP) None": "#",
 };
 
 let timings = [
